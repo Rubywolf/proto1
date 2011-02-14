@@ -1,0 +1,7 @@
+<h1>Add Image</h1>
+<% form_for(@pic,:url=>{:action=>'save'}) do |f| %>
+<p><b>Image_src</b><%= f.text_field :img_src %></p>
+<p><b>Caption</b><%= f.text_field :caption %></p>
+<p><b>Setname</b><%= f.text_field :setname %></p>
+<p><%= f.submit "Save"%></p>
+<% end %>

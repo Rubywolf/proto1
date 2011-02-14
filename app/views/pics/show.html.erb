@@ -1,0 +1,12 @@
+<%= link_to_unless((@pic_num <1), image_tag("first.png"), @route_string+"/0") %>
+<%= link_to_unless((@pic_num < 1), image_tag("prev.png"), @route_string+"/"+(@pic_num-1).to_s) %>
+<%= link_to_unless((@pic_num+1 >= @pics.length), image_tag("next.png"), @route_string+"/"+(@pic_num+1).to_s) %>
+<%= link_to_unless((@pic_num+1 >= @pics.length), image_tag("last.png"), @route_string+"/"+(@pics.length-1).to_s) %>
+<p>Image <%= @pic_num+1 %> of <%= @pics.length %>
+<p><%= image_tag @pic.img_src %></p>
+<p><%= @pic.caption %></p>
+<%= link_to_unless((@pic_num <1), image_tag("first.png"), @route_string+"/0") %>
+<%= link_to_unless((@pic_num < 1), image_tag("prev.png"), @route_string+"/"+(@pic_num-1).to_s) %>
+<%= link_to_unless((@pic_num+1 >= @pics.length), image_tag("next.png"), @route_string+"/"+(@pic_num+1).to_s) %>
+<%= link_to_unless((@pic_num+1 >= @pics.length), image_tag("last.png"), @route_string+"/"+(@pics.length-1).to_s) %>
+<%= button_to 'Delete',  {:controller => 'pics', :action => :delete}, :confirm => 'Are you sure you want to delete this pic?',  :pic_id => @pic.id, :set_name => @pic.setname, :pic_num => @pic_num %>
