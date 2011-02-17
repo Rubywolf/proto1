@@ -35,16 +35,19 @@ class PicsController < ApplicationController
     
     # Get the requested pic, set height to resize if necessary
 		@pic=pics[@pic_num]
-    @pic_height = 450
     if @pic.img_height.nil?
-      size = FastImage.size(@pic.img_src, :timeout => 3)
+      size = FastImage.size(@pic.img_src, :timeout => 7)
       if !size.nil? 
         Pic.update(@pic.id, :img_width => size[0], :img_height => size[1])
         Pic.save(@pic.id)
       end
     end
-    if @pic.img_height < 450
+    if @pic.img_height.nil?
+      @pic_height = 450
+    elsif @pic.img_height < 450
       @pic_height = @pic.img_height
+    else
+      @pic_height = 450
     end
 	end
 	
