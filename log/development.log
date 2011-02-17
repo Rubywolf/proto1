@@ -22757,3 +22757,143 @@ Processing PicsController#index (for 127.0.0.1 at 2011-02-17 18:13:52) [GET]
   [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
 Rendering pics/index
 Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-17 18:14:43) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering pics/show
+Rendered layouts/_navbar (0.4ms)
+Rendered layouts/_navbar (0.4ms)
+Completed in 26ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-17 18:14:44) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"63"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering pics/show
+Rendered layouts/_navbar (0.4ms)
+Rendered layouts/_navbar (0.4ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/63]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-17 18:14:47) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering pics/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-17 18:17:51) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering pics/index
+Completed in 28ms (View: 7, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-17 18:18:11) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering pics/index
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-17 18:18:22) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering pics/index
+Completed in 26ms (View: 24, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-17 18:18:32) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering pics/index
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-17 18:20:13) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering pics/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-17 18:20:46) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering pics/index
+Completed in 26ms (View: 7, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-17 18:21:06) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering pics/index
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-17 18:21:19) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering pics/index
+Completed in 26ms (View: 24, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-17 18:22:03) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering pics/index
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-17 18:22:06) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering pics/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-17 18:22:19) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering pics/index
+Completed in 26ms (View: 23, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#edit (for 127.0.0.1 at 2011-02-17 18:22:21) [GET]
+Rendering pics/edit
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/edit]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-17 18:23:28) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering pics/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-17 18:23:31) [GET]
+
+ActionController::RoutingError (No route matches "/new" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/tsweat/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/tsweat/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/tsweat/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PicsController#new (for 127.0.0.1 at 2011-02-17 18:23:52) [GET]
+Rendering pics/new
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/new]
+
+
+Processing PicsController#save (for 127.0.0.1 at 2011-02-17 18:25:20) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic"=>{"img_src"=>"http://media.ebaumsworld.com/mediaFiles/picture/883100/81314423.jpg", "caption"=>"Whoa, there!", "setname"=>"chicks"}, "commit"=>"Save"}
+  [4;36;1mPic Create (0.3ms)[0m   [0;1mINSERT INTO "pics" ("img_src", "caption", "created_at", "updated_at", "setname", "img_width", "img_height") VALUES('http://media.ebaumsworld.com/mediaFiles/picture/883100/81314423.jpg', 'Whoa, there!', '2011-02-17 23:25:21', '2011-02-17 23:25:21', 'chicks', 450, 621)[0m
+Redirected to http://localhost:3001/show/chicks/last
+Completed in 393ms (DB: 0) | 302 Found [http://localhost/save]
+
+
+Processing PicsController#last (for 127.0.0.1 at 2011-02-17 18:25:21) [GET]
+  Parameters: {"setname"=>"chicks"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Redirected to http://localhost:3001/show/chicks/64
+Completed in 6ms (DB: 1) | 302 Found [http://localhost/show/chicks/last]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-17 18:25:21) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"64"}
+  [4;36;1mPic Load (0.9ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering pics/show
+Rendered layouts/_navbar (0.4ms)
+Rendered layouts/_navbar (0.4ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/64]

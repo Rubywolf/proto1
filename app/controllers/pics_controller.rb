@@ -12,7 +12,7 @@ class PicsController < ApplicationController
 		redirect_to "/show/#{@pic.setname}/last"
 	end
   
-	def edit
+	def new
 		@pic=Pic.new
 	end
 	
