@@ -1,9 +1,10 @@
 GEM
+  remote: http://rubygems.org/
   specs:
-    sdsykes-fastimage (1.2.1)
+    fastimage (1.2.8)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  sdsykes-fastimage
+  fastimage

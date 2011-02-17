@@ -1,2 +1,2 @@
 source :rubygems
-gem "sdsykes-fastimage"
+gem "fastimage"
