@@ -23020,3 +23020,14 @@ Processing PicsController#index (for 127.0.0.1 at 2011-02-17 18:40:39) [GET]
   [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
 Rendering pics/index
 Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#new (for 127.0.0.1 at 2011-02-17 18:42:55) [GET]
+Rendering pics/new
+Completed in 26ms (View: 22, DB: 0) | 200 OK [http://localhost/new]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-17 18:42:59) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering pics/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/]
