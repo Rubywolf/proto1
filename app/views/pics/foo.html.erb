@@ -1,0 +1,4 @@
+<h1>All Pics</h1>
+<% for set in @setnames %>
+<p> <%= link_to(set.setname, "/show/" + set.setname + "/0") %></p>
+<% end %>

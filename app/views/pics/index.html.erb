@@ -1,4 +1,8 @@
-<h1>All Pics</h1>
-<p> <%= @setnames[0] %> </p>
-
-<%= link_to @dogs_string, "/show/cat/0" %>
+<table align="center">
+<tr><td align="center"><h1>Picture Sets</h1></tr></td>
+<tr><td align="left"><ul>
+<% @setnames.each { |set| %>
+<li> <%= link_to(set.setname, "/show/#{set.setname}/0") %></li>
+<% } %>
+</ul></tr></td>
+</table>

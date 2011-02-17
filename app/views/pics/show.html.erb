@@ -1,12 +1,12 @@
-<%= link_to_unless((@pic_num <1), image_tag("first.png"), @route_string+"/0") %>
-<%= link_to_unless((@pic_num < 1), image_tag("prev.png"), @route_string+"/"+(@pic_num-1).to_s) %>
-<%= link_to_unless((@pic_num+1 >= @pics.length), image_tag("next.png"), @route_string+"/"+(@pic_num+1).to_s) %>
-<%= link_to_unless((@pic_num+1 >= @pics.length), image_tag("last.png"), @route_string+"/"+(@pics.length-1).to_s) %>
-<p>Image <%= @pic_num+1 %> of <%= @pics.length %>
-<p><%= image_tag @pic.img_src %></p>
-<p><%= @pic.caption %></p>
-<%= link_to_unless((@pic_num <1), image_tag("first.png"), @route_string+"/0") %>
-<%= link_to_unless((@pic_num < 1), image_tag("prev.png"), @route_string+"/"+(@pic_num-1).to_s) %>
-<%= link_to_unless((@pic_num+1 >= @pics.length), image_tag("next.png"), @route_string+"/"+(@pic_num+1).to_s) %>
-<%= link_to_unless((@pic_num+1 >= @pics.length), image_tag("last.png"), @route_string+"/"+(@pics.length-1).to_s) %>
-<%= button_to 'Delete',  {:controller => 'pics', :action => :delete}, :confirm => 'Are you sure you want to delete this pic?',  :pic_id => @pic.id, :set_name => @pic.setname, :pic_num => @pic_num %>
+<table align="center">
+<tr><td align="center" colspan="3"><%= render "layouts/navbar" %></td></tr>
+<tr><td align="center" colspan="3"><p>Image <%= @pic_num+1 %> of <%= @pics_count %></td></tr>
+<tr><td align="center" colspan="3"><%= link_to_if @pic_height == 450, image_tag(@pic.img_src, :height => @pic_height), @pic.img_src %></td></tr>
+<tr><td align="center" colspan="3"><%= @pic.caption %></td></tr>
+<tr><td align="center" colspan="3"><%= button_to('Delete',  {:controller => 'pics', :action => :delete,
+                                                             :pic_id => @pic.id, :set_name => @pic.setname, 
+                                                             :pic_num => @pic_num}, 
+                                                             :confirm => 'Are you sure you want to delete this pic?') %></td></tr>
+<tr><td align="center" colspan="3"><%= render "layouts/navbar" %></td></tr>
+<tr><td align="left"><%= @pic.id %></td><td align="center"><%= @pic.setname %></td><td align="right"><%= @pic_num %></td></tr>
+</table>
