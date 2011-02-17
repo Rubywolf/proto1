@@ -17,6 +17,7 @@ class PicsController < ApplicationController
 	end
 	
 	def show
+    @height_limit = 600
     # Get the pics in the requested set
     this_set = params[:setname]
 		pics=Pic.find_all_by_setname(this_set)
@@ -43,11 +44,11 @@ class PicsController < ApplicationController
       end
     end
     if @pic.img_height.nil?
-      @pic_height = 450
-    elsif @pic.img_height < 450
+      @pic_height = @height_limit
+    elsif @pic.img_height < @height_limit
       @pic_height = @pic.img_height
     else
-      @pic_height = 450
+      @pic_height =@height_limit
     end
 	end
 	

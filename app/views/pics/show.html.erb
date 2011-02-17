@@ -1,7 +1,7 @@
 <table align="center">
 <tr><td align="center" colspan="3"><%= render "layouts/navbar" %></td></tr>
 <tr><td align="center" colspan="3"><p>Image <%= @pic_num+1 %> of <%= @pics_count %></td></tr>
-<tr><td align="center" colspan="3"><%= link_to_if @pic_height == 450, image_tag(@pic.img_src, :height => @pic_height), @pic.img_src %></td></tr>
+<tr><td align="center" colspan="3"><%= link_to_if @pic_height == @height_limit, image_tag(@pic.img_src, :height => @pic_height), @pic.img_src %></td></tr>
 <tr><td align="center" colspan="3"><%= @pic.caption %></td></tr>
 <tr><td align="center" colspan="3"><%= button_to('Delete',  {:controller => 'pics', :action => :delete,
                                                              :pic_id => @pic.id, :set_name => @pic.setname, 
