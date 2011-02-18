@@ -19,7 +19,7 @@ class PicsController < ApplicationController
 	end
 	
 	def show
-    @height_limit = 630
+    @height_limit = 610
     # Get the pics in the requested set
     this_set = params[:setname]
 		pics=Pic.find_all_by_setname(this_set)

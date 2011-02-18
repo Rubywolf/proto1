@@ -1,13 +1,15 @@
 .container {
-    width: 710px;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 body {
     background: #556;
+	text-align: center;
 }
 
 header {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 section {
@@ -45,8 +47,10 @@ a img {
 nav {
     padding: 0 0.7em;
     white-space: nowrap;
-	background: #eee
-	vertical-align: center
+}
+
+picset {
+	text-align: left;
 }
 
 picset ul {
@@ -71,10 +75,21 @@ picset ul li a:hover {
     text-decoration: underline;
 }
 
+.caption {
+	font-size: 120%;
+	background: #eee;
+	margin: 0;
+}
+
+
 /*  Round corners  */
 
 .round {
     -moz-border-radius:     10px;
     -webkit-border-radius:  10px;
     border-radius:          10px;
+}
+
+.delete {
+	padding-top: 5px;
 }
