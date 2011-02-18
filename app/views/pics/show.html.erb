@@ -3,9 +3,4 @@
 <tr><td><p>Image <%= @pic_num+1 %> of <%= @pics_count %></td></tr>
 <tr><td><%= link_to_if @pic_height == @height_limit, image_tag(@pic.img_src, :height => @pic_height), @pic.img_src %></td></tr>
 <tr><td><%= @pic.caption %></td></tr>
-<tr><td align="center"><%= button_to('Delete',  {:controller => 'pics', :action => :delete,
-                                                             :pic_id => @pic.id, :set_name => @pic.setname, 
-                                                             :pic_num => @pic_num}, 
-                                                             :confirm => 'Are you sure you want to delete this pic?') %></td></tr>
-<tr><td><%= render "layouts/navbar" %></td></tr>
 </table>
