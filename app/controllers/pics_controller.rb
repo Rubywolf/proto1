@@ -19,7 +19,7 @@ class PicsController < ApplicationController
 	end
 	
 	def show
-    @height_limit = 600
+    @height_limit = 700
     # Get the pics in the requested set
     this_set = params[:setname]
 		pics=Pic.find_all_by_setname(this_set)
@@ -36,18 +36,9 @@ class PicsController < ApplicationController
       @route_string="/show/#{this_set}"
 		end
     
-    # Get the requested pic, set height to resize if necessary
+    # Get the requested pic, resize if too large
 		@pic=pics[@pic_num]
-    if @pic.img_height.nil?
-      size = FastImage.size(@pic.img_src, :timeout => 7)
-      if !size.nil? 
-        Pic.update(@pic.id, :img_width => size[0], :img_height => size[1])
-        Pic.save(@pic.id)
-      end
-    end
-    if @pic.img_height.nil?
-      @pic_height = @height_limit
-    elsif @pic.img_height < @height_limit
+    if @pic.img_height < @height_limit
       @pic_height = @pic.img_height
     else
       @pic_height =@height_limit
@@ -59,7 +50,11 @@ class PicsController < ApplicationController
 		delete_pic.destroy
 		new_num = params[:pic_num].to_i
     new_num -= 1
-		redirect_to "/show/#{params[:set_name]}/#{new_num}"
+    if new_num < 0 and Pic.find_all_by_setname(params[:set_name]).length > 0
+		  redirect_to "/show/#{params[:set_name]}/#{new_num}"
+    else
+      redirect_to "/"
+    end
 	end
 	
 	def index

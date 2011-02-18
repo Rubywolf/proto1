@@ -1,14 +1,9 @@
-<table>
-<tr>
-<td><%= link_to(image_tag("go-home.png"), "/pics") %>
+<%= link_to(image_tag("go-home.png"), "/pics") %>
 <%= link_to_unless((@pic_num <1), image_tag("first.png"), "#{@route_string}/0") %>
 <%= link_to_unless((@pic_num < 1), image_tag("prev.png"), "#{@route_string}/#{(@pic_num-1).to_s}") %>
 <%= link_to_unless((@pics_count < 2), image_tag("random.png"), "#{@route_string}/#{rand(@pics_count)}") %>
 <%= link_to_unless((@pic_num+1 >= @pics_count), image_tag("next.png"), "#{@route_string}/#{(@pic_num+1).to_s}") %>
 <%= link_to_unless((@pic_num+1 >= @pics_count), image_tag("last.png"), "#{@route_string}/#{(@pics_count-1).to_s}") %>
-<td><%= button_to('Delete',  {:controller => 'pics', :action => :delete,
-                                                               :pic_id => @pic.id, :set_name => @pic.setname, 
-                                                               :pic_num => @pic_num}, 
-                                                               :confirm => 'Are you sure you want to delete this pic?') %></td>
-</tr>
-</table>
+
+
+
