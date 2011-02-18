@@ -27436,3 +27436,503 @@ Rendering template within layouts/application
 Rendering pics/show
 Rendered layouts/_navbar (0.5ms)
 Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/show/dog/2]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 13:33:19) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#new (for 127.0.0.1 at 2011-02-18 13:33:20) [GET]
+Rendering template within layouts/application
+Rendering pics/new
+Completed in 23ms (View: 4, DB: 0) | 200 OK [http://localhost/new]
+
+
+Processing PicsController#save (for 127.0.0.1 at 2011-02-18 13:33:33) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic"=>{"img_src"=>"http://miniology.com/wp-content/uploads/2010/08/eva-herzigova_32.jpg", "caption"=>"That's her...", "setname"=>"eva"}, "commit"=>"Save"}
+  [4;35;1mPic Create (0.2ms)[0m   [0mINSERT INTO "pics" ("img_src", "caption", "created_at", "updated_at", "setname", "img_width", "img_height") VALUES('http://miniology.com/wp-content/uploads/2010/08/eva-herzigova_32.jpg', 'That''s her...', '2011-02-18 18:33:34', '2011-02-18 18:33:34', 'eva', 1024, 768)[0m
+Redirected to http://localhost:3001/show/eva/last
+Completed in 1027ms (DB: 0) | 302 Found [http://localhost/save]
+
+
+Processing PicsController#last (for 127.0.0.1 at 2011-02-18 13:33:34) [GET]
+  Parameters: {"setname"=>"eva"}
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Redirected to http://localhost:3001/show/eva/0
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/show/eva/last]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:33:34) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"0"}
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.4ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/0]
+
+
+Processing PicsController#save (for 127.0.0.1 at 2011-02-18 13:33:37) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic"=>{"img_src"=>"http://miniology.com/wp-content/uploads/2010/08/eva-herzigova_32.jpg", "caption"=>"That's her...", "setname"=>"eva"}, "commit"=>"Save"}
+  [4;36;1mPic Create (0.2ms)[0m   [0;1mINSERT INTO "pics" ("img_src", "caption", "created_at", "updated_at", "setname", "img_width", "img_height") VALUES('http://miniology.com/wp-content/uploads/2010/08/eva-herzigova_32.jpg', 'That''s her...', '2011-02-18 18:33:38', '2011-02-18 18:33:38', 'eva', 1024, 768)[0m
+Redirected to http://localhost:3001/show/eva/last
+Completed in 1044ms (DB: 0) | 302 Found [http://localhost/save]
+
+
+Processing PicsController#last (for 127.0.0.1 at 2011-02-18 13:33:38) [GET]
+  Parameters: {"setname"=>"eva"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Redirected to http://localhost:3001/show/eva/1
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/show/eva/last]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:33:38) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"1"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 24ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/1]
+
+
+Processing PicsController#save (for 127.0.0.1 at 2011-02-18 13:33:39) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic"=>{"img_src"=>"http://miniology.com/wp-content/uploads/2010/08/eva-herzigova_32.jpg", "caption"=>"That's her...", "setname"=>"eva"}, "commit"=>"Save"}
+  [4;35;1mPic Create (0.2ms)[0m   [0mINSERT INTO "pics" ("img_src", "caption", "created_at", "updated_at", "setname", "img_width", "img_height") VALUES('http://miniology.com/wp-content/uploads/2010/08/eva-herzigova_32.jpg', 'That''s her...', '2011-02-18 18:33:40', '2011-02-18 18:33:40', 'eva', 1024, 768)[0m
+Redirected to http://localhost:3001/show/eva/last
+Completed in 969ms (DB: 0) | 302 Found [http://localhost/save]
+
+
+Processing PicsController#last (for 127.0.0.1 at 2011-02-18 13:33:40) [GET]
+  Parameters: {"setname"=>"eva"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Redirected to http://localhost:3001/show/eva/2
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/show/eva/last]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:33:40) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"2"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/2]
+
+
+Processing PicsController#save (for 127.0.0.1 at 2011-02-18 13:33:42) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic"=>{"img_src"=>"http://miniology.com/wp-content/uploads/2010/08/eva-herzigova_32.jpg", "caption"=>"That's her...", "setname"=>"eva"}, "commit"=>"Save"}
+  [4;36;1mPic Create (0.3ms)[0m   [0;1mINSERT INTO "pics" ("img_src", "caption", "created_at", "updated_at", "setname", "img_width", "img_height") VALUES('http://miniology.com/wp-content/uploads/2010/08/eva-herzigova_32.jpg', 'That''s her...', '2011-02-18 18:33:43', '2011-02-18 18:33:43', 'eva', 1024, 768)[0m
+Redirected to http://localhost:3001/show/eva/last
+Completed in 1159ms (DB: 0) | 302 Found [http://localhost/save]
+
+
+Processing PicsController#last (for 127.0.0.1 at 2011-02-18 13:33:44) [GET]
+  Parameters: {"setname"=>"eva"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Redirected to http://localhost:3001/show/eva/3
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/show/eva/last]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:33:44) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"3"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 24ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/3]
+
+
+Processing PicsController#delete (for 127.0.0.1 at 2011-02-18 13:33:52) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic_id"=>"99", "pic_num"=>"3", "set_name"=>"eva"}
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 99) [0m
+  [4;36;1mPic Destroy (0.1ms)[0m   [0;1mDELETE FROM "pics" WHERE "id" = 99[0m
+Redirected to http://localhost:3001/
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/delete?pic_id=99&pic_num=3&set_name=eva]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 13:33:52) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:33:59) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"0"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 27ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/0]
+
+
+Processing PicsController#delete (for 127.0.0.1 at 2011-02-18 13:34:02) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic_id"=>"96", "pic_num"=>"0", "set_name"=>"eva"}
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 96) [0m
+  [4;36;1mPic Destroy (0.1ms)[0m   [0;1mDELETE FROM "pics" WHERE "id" = 96[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Redirected to http://localhost:3001/show/eva/0
+Completed in 133ms (DB: 0) | 302 Found [http://localhost/delete?pic_id=96&pic_num=0&set_name=eva]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:34:02) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"0"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:34:05) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"1"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/1]
+
+
+Processing PicsController#delete (for 127.0.0.1 at 2011-02-18 13:34:11) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic_id"=>"98", "pic_num"=>"1", "set_name"=>"eva"}
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 98) [0m
+  [4;35;1mPic Destroy (0.1ms)[0m   [0mDELETE FROM "pics" WHERE "id" = 98[0m
+Redirected to http://localhost:3001/
+Completed in 112ms (DB: 0) | 302 Found [http://localhost/delete?pic_id=98&pic_num=1&set_name=eva]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 13:34:11) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:35:26) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"0"}
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/0]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 13:35:29) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#new (for 127.0.0.1 at 2011-02-18 13:35:30) [GET]
+Rendering template within layouts/application
+Rendering pics/new
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/new]
+
+
+Processing PicsController#save (for 127.0.0.1 at 2011-02-18 13:36:02) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic"=>{"img_src"=>"http://www.wallpaperbase.com/wallpapers/celebs/evaherzigova/eva_herzigova_1.jpg", "caption"=>"That's her...", "setname"=>"eva"}, "commit"=>"Save"}
+  [4;35;1mPic Create (0.2ms)[0m   [0mINSERT INTO "pics" ("img_src", "caption", "created_at", "updated_at", "setname", "img_width", "img_height") VALUES('http://www.wallpaperbase.com/wallpapers/celebs/evaherzigova/eva_herzigova_1.jpg', 'That''s her...', '2011-02-18 18:36:02', '2011-02-18 18:36:02', 'eva', 1024, 768)[0m
+Redirected to http://localhost:3001/show/eva/last
+Completed in 375ms (DB: 0) | 302 Found [http://localhost/save]
+
+
+Processing PicsController#last (for 127.0.0.1 at 2011-02-18 13:36:02) [GET]
+  Parameters: {"setname"=>"eva"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Redirected to http://localhost:3001/show/eva/1
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/show/eva/last]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:36:02) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"1"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 23ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/1]
+
+
+Processing PicsController#save (for 127.0.0.1 at 2011-02-18 13:36:32) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic"=>{"img_src"=>"http://www.branwen.net/imgs/Eva-Herzigova-18.JPG", "caption"=>"That's her...", "setname"=>"eva"}, "commit"=>"Save"}
+  [4;36;1mPic Create (0.2ms)[0m   [0;1mINSERT INTO "pics" ("img_src", "caption", "created_at", "updated_at", "setname", "img_width", "img_height") VALUES('http://www.branwen.net/imgs/Eva-Herzigova-18.JPG', 'That''s her...', '2011-02-18 18:36:33', '2011-02-18 18:36:33', 'eva', 1024, 768)[0m
+Redirected to http://localhost:3001/show/eva/last
+Completed in 666ms (DB: 0) | 302 Found [http://localhost/save]
+
+
+Processing PicsController#last (for 127.0.0.1 at 2011-02-18 13:36:33) [GET]
+  Parameters: {"setname"=>"eva"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Redirected to http://localhost:3001/show/eva/2
+Completed in 21ms (DB: 0) | 302 Found [http://localhost/show/eva/last]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:36:33) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"2"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/2]
+
+
+Processing PicsController#delete (for 127.0.0.1 at 2011-02-18 13:36:39) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic_id"=>"101", "pic_num"=>"2", "set_name"=>"eva"}
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 101) [0m
+  [4;36;1mPic Destroy (0.1ms)[0m   [0;1mDELETE FROM "pics" WHERE "id" = 101[0m
+Redirected to http://localhost:3001/
+Completed in 211ms (DB: 0) | 302 Found [http://localhost/delete?pic_id=101&pic_num=2&set_name=eva]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 13:36:39) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 24ms (View: 21, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:39:34) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"0"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/0]
+
+
+Processing PicsController#delete (for 127.0.0.1 at 2011-02-18 13:39:38) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic_id"=>"97", "pic_num"=>"0", "set_name"=>"eva"}
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 97) [0m
+  [4;36;1mPic Destroy (0.1ms)[0m   [0;1mDELETE FROM "pics" WHERE "id" = 97[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Redirected to http://localhost:3001/show/eva/-1
+Completed in 113ms (DB: 0) | 302 Found [http://localhost/delete?pic_id=97&pic_num=0&set_name=eva]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:39:38) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"-1"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 25ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/-1]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:39:40) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"-1"}
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/-1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-18 13:42:59) [GET]
+
+SyntaxError (/home/tsweat/workspace/proto1/app/controllers/pics_controller.rb:74: syntax error, unexpected keyword_end, expecting $end):
+  <internal:prelude>:10:in `synchronize'
+  /home/tsweat/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/tsweat/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/tsweat/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (9.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 13:43:17) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 25ms (View: 22, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#new (for 127.0.0.1 at 2011-02-18 13:43:19) [GET]
+Rendering template within layouts/application
+Rendering pics/new
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/new]
+
+
+Processing PicsController#save (for 127.0.0.1 at 2011-02-18 13:43:39) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic"=>{"img_src"=>"http://www.space-fox.com/wallpapers/celebs/eva-herzigova/eva_herzigova_11.jpg", "caption"=>"", "setname"=>"eva"}, "commit"=>"Save"}
+  [4;35;1mPic Create (0.3ms)[0m   [0mINSERT INTO "pics" ("img_src", "caption", "created_at", "updated_at", "setname", "img_width", "img_height") VALUES('http://www.space-fox.com/wallpapers/celebs/eva-herzigova/eva_herzigova_11.jpg', '', '2011-02-18 18:43:40', '2011-02-18 18:43:40', 'eva', 1024, 768)[0m
+Redirected to http://localhost:3001/show/eva/last
+Completed in 1142ms (DB: 0) | 302 Found [http://localhost/save]
+
+
+Processing PicsController#last (for 127.0.0.1 at 2011-02-18 13:43:40) [GET]
+  Parameters: {"setname"=>"eva"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Redirected to http://localhost:3001/show/eva/1
+Completed in 20ms (DB: 0) | 302 Found [http://localhost/show/eva/last]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:43:40) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"1"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/1]
+
+
+Processing PicsController#save (for 127.0.0.1 at 2011-02-18 13:43:58) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic"=>{"img_src"=>"http://www.space-fox.com/wallpapers/celebs/eva-herzigova/eva_herzigova_5.jpg", "caption"=>"", "setname"=>"eva"}, "commit"=>"Save"}
+  [4;36;1mPic Create (0.2ms)[0m   [0;1mINSERT INTO "pics" ("img_src", "caption", "created_at", "updated_at", "setname", "img_width", "img_height") VALUES('http://www.space-fox.com/wallpapers/celebs/eva-herzigova/eva_herzigova_5.jpg', '', '2011-02-18 18:43:59', '2011-02-18 18:43:59', 'eva', 1024, 768)[0m
+Redirected to http://localhost:3001/show/eva/last
+Completed in 1185ms (DB: 0) | 302 Found [http://localhost/save]
+
+
+Processing PicsController#last (for 127.0.0.1 at 2011-02-18 13:44:00) [GET]
+  Parameters: {"setname"=>"eva"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Redirected to http://localhost:3001/show/eva/2
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/show/eva/last]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:44:00) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"2"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 24ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/2]
+
+
+Processing PicsController#save (for 127.0.0.1 at 2011-02-18 13:44:17) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic"=>{"img_src"=>"http://www.space-fox.com/wallpapers/celebs/eva-herzigova/eva_herzigova_7.jpg", "caption"=>"", "setname"=>"eva"}, "commit"=>"Save"}
+  [4;35;1mPic Create (0.2ms)[0m   [0mINSERT INTO "pics" ("img_src", "caption", "created_at", "updated_at", "setname", "img_width", "img_height") VALUES('http://www.space-fox.com/wallpapers/celebs/eva-herzigova/eva_herzigova_7.jpg', '', '2011-02-18 18:44:18', '2011-02-18 18:44:18', 'eva', 1024, 768)[0m
+Redirected to http://localhost:3001/show/eva/last
+Completed in 1877ms (DB: 0) | 302 Found [http://localhost/save]
+
+
+Processing PicsController#last (for 127.0.0.1 at 2011-02-18 13:44:18) [GET]
+  Parameters: {"setname"=>"eva"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Redirected to http://localhost:3001/show/eva/3
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/show/eva/last]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:44:19) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"3"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/3]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:44:21) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"0"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:44:24) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"1"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 24ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/1]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:44:25) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"0"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/0]
+
+
+Processing PicsController#delete (for 127.0.0.1 at 2011-02-18 13:44:28) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic_id"=>"100", "pic_num"=>"0", "set_name"=>"eva"}
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 100) [0m
+  [4;36;1mPic Destroy (0.1ms)[0m   [0;1mDELETE FROM "pics" WHERE "id" = 100[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Redirected to http://localhost:3001/show/eva/0
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/pics_controller.rb:61:in `delete'
+  <internal:prelude>:10:in `synchronize'
+  /home/tsweat/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/tsweat/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/tsweat/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (10.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:44:58) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"0"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/0]
+
+
+Processing PicsController#delete (for 127.0.0.1 at 2011-02-18 13:45:04) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic_id"=>"102", "pic_num"=>"0", "set_name"=>"eva"}
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 102) [0m
+  [4;36;1mPic Destroy (0.1ms)[0m   [0;1mDELETE FROM "pics" WHERE "id" = 102[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Redirected to http://localhost:3001/show/eva/0
+Completed in 121ms (DB: 0) | 302 Found [http://localhost/delete?pic_id=102&pic_num=0&set_name=eva]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:45:04) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"0"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:45:12) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"1"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/1]
+
+
+Processing PicsController#delete (for 127.0.0.1 at 2011-02-18 13:45:14) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic_id"=>"104", "pic_num"=>"1", "set_name"=>"eva"}
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 104) [0m
+  [4;35;1mPic Destroy (0.1ms)[0m   [0mDELETE FROM "pics" WHERE "id" = 104[0m
+Redirected to http://localhost:3001/show/eva/0
+Completed in 115ms (DB: 0) | 302 Found [http://localhost/delete?pic_id=104&pic_num=1&set_name=eva]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:45:14) [GET]
+  Parameters: {"setname"=>"eva", "id"=>"0"}
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/show/eva/0]
+
+
+Processing PicsController#delete (for 127.0.0.1 at 2011-02-18 13:45:18) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic_id"=>"103", "pic_num"=>"0", "set_name"=>"eva"}
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 103) [0m
+  [4;36;1mPic Destroy (0.1ms)[0m   [0;1mDELETE FROM "pics" WHERE "id" = 103[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'eva') [0m
+Redirected to http://localhost:3001/
+Completed in 186ms (DB: 0) | 302 Found [http://localhost/delete?pic_id=103&pic_num=0&set_name=eva]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 13:45:19) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]

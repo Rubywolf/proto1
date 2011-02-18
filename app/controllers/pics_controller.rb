@@ -50,10 +50,15 @@ class PicsController < ApplicationController
 		delete_pic.destroy
 		new_num = params[:pic_num].to_i
     new_num -= 1
-    if new_num < 0 and Pic.find_all_by_setname(params[:set_name]).length > 0
-		  redirect_to "/show/#{params[:set_name]}/#{new_num}"
+    if new_num < 0 
+      set_count = Pic.find_all_by_setname(params[:set_name]).length
+      if set_count > 0
+        redirect_to "/show/#{params[:set_name]}/0"
+      else
+        redirect_to "/"
+      end
     else
-      redirect_to "/"
+      redirect_to "/show/#{params[:set_name]}/#{new_num}"
     end
 	end
 	
