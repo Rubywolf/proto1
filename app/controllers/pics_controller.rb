@@ -19,7 +19,7 @@ class PicsController < ApplicationController
 	end
 	
 	def show
-    @height_limit = 700
+    @height_limit = 630
     # Get the pics in the requested set
     this_set = params[:setname]
 		pics=Pic.find_all_by_setname(this_set)
@@ -49,16 +49,12 @@ class PicsController < ApplicationController
 		delete_pic = Pic.find(params[:pic_id])
 		delete_pic.destroy
 		new_num = params[:pic_num].to_i
-    new_num -= 1
-    if new_num < 0 
-      set_count = Pic.find_all_by_setname(params[:set_name]).length
-      if set_count > 0
-        redirect_to "/show/#{params[:set_name]}/0"
-      else
-        redirect_to "/"
-      end
-    else
+    new_num -= 1 if new_num > 0
+    set_count = Pic.find_all_by_setname(params[:set_name]).length
+    if set_count > 0
       redirect_to "/show/#{params[:set_name]}/#{new_num}"
+    else
+      redirect_to "/"
     end
 	end
 	

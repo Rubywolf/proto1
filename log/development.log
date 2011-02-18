@@ -27936,3 +27936,1892 @@ Processing PicsController#index (for 127.0.0.1 at 2011-02-18 13:45:19) [GET]
 Rendering template within layouts/application
 Rendering pics/index
 Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#new (for 127.0.0.1 at 2011-02-18 13:51:05) [GET]
+Rendering template within layouts/application
+Rendering pics/new
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/new]
+
+
+Processing PicsController#save (for 127.0.0.1 at 2011-02-18 13:51:11) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic"=>{"img_src"=>"http://www.uncoached.com/wp-content/uploads/2009/04/390888827_a513894a33.jpg", "caption"=>"", "setname"=>"si"}, "commit"=>"Save"}
+  [4;35;1mPic Create (0.2ms)[0m   [0mINSERT INTO "pics" ("img_src", "caption", "created_at", "updated_at", "setname", "img_width", "img_height") VALUES('http://www.uncoached.com/wp-content/uploads/2009/04/390888827_a513894a33.jpg', '', '2011-02-18 18:51:11', '2011-02-18 18:51:11', 'si', 500, 368)[0m
+Redirected to http://localhost:3001/show/si/last
+Completed in 292ms (DB: 0) | 302 Found [http://localhost/save]
+
+
+Processing PicsController#last (for 127.0.0.1 at 2011-02-18 13:51:11) [GET]
+  Parameters: {"setname"=>"si"}
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Redirected to http://localhost:3001/show/si/0
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/show/si/last]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:51:11) [GET]
+  Parameters: {"setname"=>"si", "id"=>"0"}
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.4ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/show/si/0]
+
+
+Processing PicsController#save (for 127.0.0.1 at 2011-02-18 13:51:37) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic"=>{"img_src"=>"http://www.celebgossipz.com/wp-content/uploads/2009/02/jessica-gomes-2009-sports-illustrated-swimsuit.jpg", "caption"=>"", "setname"=>"si"}, "commit"=>"Save"}
+  [4;36;1mPic Create (0.2ms)[0m   [0;1mINSERT INTO "pics" ("img_src", "caption", "created_at", "updated_at", "setname", "img_width", "img_height") VALUES('http://www.celebgossipz.com/wp-content/uploads/2009/02/jessica-gomes-2009-sports-illustrated-swimsuit.jpg', '', '2011-02-18 18:51:37', '2011-02-18 18:51:37', 'si', 450, 520)[0m
+Redirected to http://localhost:3001/show/si/last
+Completed in 541ms (DB: 0) | 302 Found [http://localhost/save]
+
+
+Processing PicsController#last (for 127.0.0.1 at 2011-02-18 13:51:37) [GET]
+  Parameters: {"setname"=>"si"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Redirected to http://localhost:3001/show/si/1
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/show/si/last]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:51:37) [GET]
+  Parameters: {"setname"=>"si", "id"=>"1"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/show/si/1]
+
+
+Processing PicsController#save (for 127.0.0.1 at 2011-02-18 13:51:59) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic"=>{"img_src"=>"http://www.celebgossipz.com/wp-content/uploads/2009/02/2009-sports-illustrated-swimsuit-issue-bar-refaeli-30.jpg", "caption"=>"", "setname"=>"si"}, "commit"=>"Save"}
+  [4;35;1mPic Create (0.2ms)[0m   [0mINSERT INTO "pics" ("img_src", "caption", "created_at", "updated_at", "setname", "img_width", "img_height") VALUES('http://www.celebgossipz.com/wp-content/uploads/2009/02/2009-sports-illustrated-swimsuit-issue-bar-refaeli-30.jpg', '', '2011-02-18 18:52:00', '2011-02-18 18:52:00', 'si', 444, 666)[0m
+Redirected to http://localhost:3001/show/si/last
+Completed in 760ms (DB: 0) | 302 Found [http://localhost/save]
+
+
+Processing PicsController#last (for 127.0.0.1 at 2011-02-18 13:52:00) [GET]
+  Parameters: {"setname"=>"si"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Redirected to http://localhost:3001/show/si/2
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/show/si/last]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:52:00) [GET]
+  Parameters: {"setname"=>"si", "id"=>"2"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 25ms (View: 2, DB: 0) | 200 OK [http://localhost/show/si/2]
+
+
+Processing PicsController#save (for 127.0.0.1 at 2011-02-18 13:52:24) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic"=>{"img_src"=>"http://www.thelastbraincell.com/wp-content/uploads/2009/02/brooklyn-decker-si-swimsuit-issue-2009-27.jpg", "caption"=>"", "setname"=>"si"}, "commit"=>"Save"}
+  [4;36;1mPic Create (0.2ms)[0m   [0;1mINSERT INTO "pics" ("img_src", "caption", "created_at", "updated_at", "setname", "img_width", "img_height") VALUES('http://www.thelastbraincell.com/wp-content/uploads/2009/02/brooklyn-decker-si-swimsuit-issue-2009-27.jpg', '', '2011-02-18 18:52:24', '2011-02-18 18:52:24', 'si', 470, 666)[0m
+Redirected to http://localhost:3001/show/si/last
+Completed in 635ms (DB: 0) | 302 Found [http://localhost/save]
+
+
+Processing PicsController#last (for 127.0.0.1 at 2011-02-18 13:52:25) [GET]
+  Parameters: {"setname"=>"si"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Redirected to http://localhost:3001/show/si/3
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/show/si/last]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:52:25) [GET]
+  Parameters: {"setname"=>"si", "id"=>"3"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/show/si/3]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:52:28) [GET]
+  Parameters: {"setname"=>"si", "id"=>"2"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 24ms (View: 2, DB: 0) | 200 OK [http://localhost/show/si/2]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:52:28) [GET]
+  Parameters: {"setname"=>"si", "id"=>"1"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/show/si/1]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:52:29) [GET]
+  Parameters: {"setname"=>"si", "id"=>"0"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/show/si/0]
+
+
+Processing PicsController#delete (for 127.0.0.1 at 2011-02-18 13:52:33) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic_id"=>"105", "pic_num"=>"0", "set_name"=>"si"}
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 105) [0m
+  [4;35;1mPic Destroy (0.1ms)[0m   [0mDELETE FROM "pics" WHERE "id" = 105[0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Redirected to http://localhost:3001/show/si/0
+Completed in 223ms (DB: 1) | 302 Found [http://localhost/delete?pic_id=105&pic_num=0&set_name=si]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:52:34) [GET]
+  Parameters: {"setname"=>"si", "id"=>"0"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/show/si/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:52:36) [GET]
+  Parameters: {"setname"=>"si", "id"=>"1"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/show/si/1]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:52:36) [GET]
+  Parameters: {"setname"=>"si", "id"=>"2"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 25ms (View: 2, DB: 0) | 200 OK [http://localhost/show/si/2]
+
+
+Processing PicsController#delete (for 127.0.0.1 at 2011-02-18 13:52:39) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic_id"=>"108", "pic_num"=>"2", "set_name"=>"si"}
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 108) [0m
+  [4;35;1mPic Destroy (0.1ms)[0m   [0mDELETE FROM "pics" WHERE "id" = 108[0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Redirected to http://localhost:3001/show/si/1
+Completed in 86ms (DB: 0) | 302 Found [http://localhost/delete?pic_id=108&pic_num=2&set_name=si]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:52:39) [GET]
+  Parameters: {"setname"=>"si", "id"=>"1"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/show/si/1]
+
+
+Processing PicsController#delete (for 127.0.0.1 at 2011-02-18 13:52:43) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic_id"=>"107", "pic_num"=>"1", "set_name"=>"si"}
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 107) [0m
+  [4;35;1mPic Destroy (0.1ms)[0m   [0mDELETE FROM "pics" WHERE "id" = 107[0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Redirected to http://localhost:3001/show/si/0
+Completed in 148ms (DB: 0) | 302 Found [http://localhost/delete?pic_id=107&pic_num=1&set_name=si]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 13:52:43) [GET]
+  Parameters: {"setname"=>"si", "id"=>"0"}
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.4ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/show/si/0]
+
+
+Processing PicsController#delete (for 127.0.0.1 at 2011-02-18 13:52:45) [POST]
+  Parameters: {"authenticity_token"=>"wLUDWRk442o0Ec6LFoSF118BRIn2Yz1BSp5PqbCDrjc=", "pic_id"=>"106", "pic_num"=>"0", "set_name"=>"si"}
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 106) [0m
+  [4;35;1mPic Destroy (0.1ms)[0m   [0mDELETE FROM "pics" WHERE "id" = 106[0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'si') [0m
+Redirected to http://localhost:3001/
+Completed in 127ms (DB: 0) | 302 Found [http://localhost/delete?pic_id=106&pic_num=0&set_name=si]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 13:52:45) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:36:51) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.6ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:37:02) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:37:26) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:37:37) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:37:53) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 24ms (View: 21, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:38:05) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:38:16) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:38:25) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 24ms (View: 21, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:38:34) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:38:40) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:38:46) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:38:53) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:49:44) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:49:58) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:50:06) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:50:14) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:50:24) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;36;1mPic Load (0.9ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:50:57) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 27ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:51:04) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#new (for 127.0.0.1 at 2011-02-18 14:51:06) [GET]
+Rendering template within layouts/application
+Rendering pics/new
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/new]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:51:10) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:51:11) [GET]
+  Parameters: {"setname"=>"hippos", "id"=>"0"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'hippos') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/show/hippos/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:51:51) [GET]
+  Parameters: {"setname"=>"hippos", "id"=>"0"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'hippos') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 25ms (View: 3, DB: 0) | 200 OK [http://localhost/show/hippos/0]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:51:52) [GET]
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:52:24) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:52:30) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 27ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:52:37) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"4"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/4]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:52:52) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"4"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/4]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:52:54) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"32"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/32]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:52:56) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"23"}
+  [4;36;1mPic Load (0.9ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/23]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:52:57) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"12"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 27ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/12]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:52:58) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"52"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/52]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:52:59) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"18"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/18]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:52:59) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"26"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/26]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:53:00) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"8"}
+  [4;35;1mPic Load (0.9ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/8]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:53:08) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"8"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/8]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:53:14) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"65"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/65]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:53:18) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"58"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/58]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:53:26) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"58"}
+  [4;35;1mPic Load (1.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.6ms)
+Rendered layouts/_stylesheets (0.4ms)
+Completed in 30ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/58]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:53:30) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"59"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/59]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:53:38) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"59"}
+  [4;35;1mPic Load (1.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/59]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:53:49) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"59"}
+  [4;36;1mPic Load (1.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.6ms)
+Rendered layouts/_stylesheets (0.4ms)
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/59]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:53:58) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"59"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/59]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:54:04) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"59"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.6ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/59]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:54:17) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"59"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/59]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:54:34) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"59"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 26ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/59]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:54:38) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"59"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/59]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:54:45) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"59"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 28ms (View: 20, DB: 1) | 200 OK [http://localhost/show/chicks/59]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:54:55) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"59"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/59]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:55:04) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"7"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/7]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:55:27) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"7"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/7]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:55:29) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:55:31) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 23ms (View: 21, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#new (for 127.0.0.1 at 2011-02-18 14:55:33) [GET]
+Rendering template within layouts/application
+Rendering pics/new
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/new]
+
+
+Processing PicsController#new (for 127.0.0.1 at 2011-02-18 14:55:34) [GET]
+Rendering template within layouts/application
+Rendering pics/new
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/new]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 14:56:12) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 24ms (View: 21, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:56:17) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.4ms)
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:56:20) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"28"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/28]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:56:23) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"21"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/21]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:58:43) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"21"}
+  [4;36;1mPic Load (1.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.6ms)
+Rendered layouts/_stylesheets (0.4ms)
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/21]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:59:46) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"21"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 27ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/21]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:59:50) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"47"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/47]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 14:59:52) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"14"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/14]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:00:19) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"14"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/14]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:00:31) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"14"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.4ms)
+Completed in 10ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/14]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:01:44) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"14"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 27ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/14]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:01:49) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"9"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/9]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:01:50) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"65"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/65]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:01:59) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"65"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.6ms)
+Rendered layouts/_stylesheets (0.4ms)
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/65]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:02:17) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"65"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/65]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:02:21) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"50"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/50]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:02:23) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"10"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/10]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:02:24) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"7"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/7]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:02:26) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"10"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/10]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:02:27) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"57"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/57]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:04:24) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"57"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (1.0ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 31ms (View: 7, DB: 1) | 200 OK [http://localhost/show/chicks/57]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:04:29) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:05:41) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 28ms (View: 26, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:05:49) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:06:24) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.4ms)
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:06:55) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:07:18) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:07:24) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 29ms (View: 8, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:07:29) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:08:16) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.4ms)
+Completed in 28ms (View: 25, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:08:25) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:08:34) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:08:53) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:09:20) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:09:41) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:09:57) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.4ms)
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:10:02) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 27ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:10:24) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:10:40) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:10:54) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:10:59) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:11:04) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 27ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:11:06) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"52"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/52]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:11:57) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"52"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/52]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:12:02) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"39"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/39]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:12:05) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#new (for 127.0.0.1 at 2011-02-18 15:12:12) [GET]
+Rendering template within layouts/application
+Rendering pics/new
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 24ms (View: 4, DB: 0) | 200 OK [http://localhost/new]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:12:13) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:12:14) [GET]
+  Parameters: {"setname"=>"dog", "id"=>"0"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'dog') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/show/dog/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:13:18) [GET]
+  Parameters: {"setname"=>"dog", "id"=>"0"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'dog') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 29ms (View: 6, DB: 0) | 200 OK [http://localhost/show/dog/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:13:26) [GET]
+  Parameters: {"setname"=>"dog", "id"=>"1"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'dog') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.4ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/show/dog/1]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:13:33) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:13:35) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:13:40) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"61"}
+  [4;36;1mPic Load (0.9ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/61]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:15:35) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"61"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.6ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 27ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/61]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:15:39) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:15:41) [GET]
+  Parameters: {"setname"=>"dog", "id"=>"0"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'dog') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/show/dog/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:15:49) [GET]
+  Parameters: {"setname"=>"dog", "id"=>"0"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'dog') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/show/dog/0]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:15:50) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.4ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:15:51) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 27ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:15:59) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"62"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/62]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:16:11) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"63"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/63]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:16:12) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"64"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 27ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/64]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:16:14) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"65"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/65]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:16:16) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"51"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/51]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:16:20) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"18"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/18]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:16:21) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"57"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/57]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:16:22) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"10"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 27ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/10]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:16:45) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"57"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/57]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:16:52) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"57"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/57]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:16:58) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"57"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/57]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:17:04) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"57"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/57]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:17:26) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"57"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 28ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/57]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:17:45) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"57"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/57]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:17:49) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"58"}
+  [4;35;1mPic Load (1.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 27ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/58]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:17:51) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"11"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/11]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:17:58) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"27"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/27]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:03) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"54"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 27ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/54]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:21) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"54"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/54]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:25) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"7"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/7]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:32) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"43"}
+  [4;35;1mPic Load (0.9ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/43]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:47) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"59"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/59]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:49) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"1"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 26ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/1]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:50) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"10"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/10]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:50) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"12"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/12]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:51) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"18"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/18]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:52) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:54) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"54"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/54]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:55) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"14"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/14]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:56) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"55"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/55]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:56) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"59"}
+  [4;35;1mPic Load (17.7ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 26ms (View: 2, DB: 18) | 200 OK [http://localhost/show/chicks/59]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:57) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"17"}
+  [4;36;1mPic Load (1.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.6ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/17]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:58) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"50"}
+  [4;35;1mPic Load (0.9ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/50]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:18:59) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"62"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 27ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/62]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:19:01) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"63"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/63]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:19:01) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"33"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/33]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:19:02) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"64"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/64]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:19:03) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:23:34) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;35;1mPic Load (18.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 27ms (View: 3, DB: 18) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:23:46) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:23:47) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"1"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/1]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:23:49) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:23:50) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:23:55) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 26ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:24:10) [GET]
+  [4;35;1mPic Load (0.3ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:24:16) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.4ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:24:24) [GET]
+  [4;35;1mPic Load (0.5ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 25ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:24:33) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.4ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:24:39) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.4ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:24:41) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:24:47) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.4ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:24:56) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:25:10) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2011-02-18 15:25:17) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT DISTINCT setname FROM "pics" [0m
+Rendering template within layouts/application
+Rendering pics/index
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pics]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:25:27) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"0"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 26ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/0]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:25:30) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"57"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/57]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:26:08) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"58"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/58]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:26:19) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"58"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 28ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/58]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:26:23) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"59"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/59]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:26:25) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"65"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/65]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:26:26) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"10"}
+  [4;35;1mPic Load (1.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/10]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:26:52) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"10"}
+  [4;36;1mPic Load (1.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.6ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/10]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:28:01) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"10"}
+  [4;35;1mPic Load (1.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.5ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/show/chicks/10]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2011-02-18 15:28:12) [GET]
+  Parameters: {"setname"=>"chicks", "id"=>"9"}
+  [4;36;1mPic Load (1.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."setname" = 'chicks') [0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered layouts/_navbar (0.6ms)
+Rendered layouts/_stylesheets (0.3ms)
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/show/chicks/9]

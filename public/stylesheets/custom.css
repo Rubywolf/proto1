@@ -1,0 +1,80 @@
+.container {
+    width: 710px;
+}
+
+body {
+    background: #556;
+}
+
+header {
+    padding-top: 20px;
+}
+
+section {
+    margin-top: 1em;
+    font-size: 120%;
+    padding: 10px;
+    background: #ccd;
+}
+
+section h1 {
+    font-size: 200%;
+}
+
+a {
+    color: #3cf;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #069;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #069;
+}
+
+a img {
+  padding: 1px;
+  border-style: outset;
+  border-color: #448;
+  border-width: 2px;
+}
+
+nav {
+    padding: 0 0.7em;
+    white-space: nowrap;
+	background: #eee
+	vertical-align: center
+}
+
+picset ul {
+    margin: 15px;
+    padding: 0;
+}
+
+picset ul li {
+    padding: 0.2em 0;
+}
+
+picset ul li a {
+    padding: 3px;
+    font-weight: bold;
+}
+
+picset ul li a:visited {
+    color: #09c;
+}
+
+picset ul li a:hover {
+    text-decoration: underline;
+}
+
+/*  Round corners  */
+
+.round {
+    -moz-border-radius:     10px;
+    -webkit-border-radius:  10px;
+    border-radius:          10px;
+}
