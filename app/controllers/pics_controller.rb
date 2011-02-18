@@ -9,7 +9,9 @@ class PicsController < ApplicationController
       @pic.img_height = img_size[1]
     end
 		@pic.save
-		redirect_to "/show/#{@pic.setname}/last"
+    if @pic.valid?
+      redirect_to "/show/#{@pic.setname}/last" 
+    end
 	end
   
 	def new
