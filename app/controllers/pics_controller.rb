@@ -1,5 +1,8 @@
 class PicsController < ApplicationController
   require 'fastimage'
+  def initialize
+    @height_limit = 600
+  end
   
 	def save
 		@pic=Pic.new(params[:pic])
@@ -15,13 +18,14 @@ class PicsController < ApplicationController
 	end
   
 	def new
+    @title = "Add a new image..."
 		@pic=Pic.new
 	end
 	
 	def show
-    @height_limit = 610
     # Get the pics in the requested set
-    this_set = params[:setname]
+    @title = params[:setname]
+    this_set = @title
 		pics=Pic.find_all_by_setname(this_set)
     @pics_count = pics.length
     
@@ -59,6 +63,7 @@ class PicsController < ApplicationController
 	end
 	
 	def index
+    @title = "Choose a picture set"
 		@setnames= Pic.find( :all, :select => 'DISTINCT setname')
 	end
 		
@@ -66,6 +71,14 @@ class PicsController < ApplicationController
 		@pics = Pic.find_all_by_setname(params[:setname])
 		redirect_to "/show/#{params[:setname]}/#{@pics.length-1}"
 	end
+  
+  def slideshow
+    @title = "Slideshow"
+    pic_set = Pic.find_all_by_setname(params[:setname])
+    @this_pic = pic_set[rand(pic_set.count)]
+    @this_height = @height_limit
+    @this_height = @this_pic.img_height if @this_pic.img_height < @height_limit
+  end
 	
 end
 
