@@ -9,4 +9,5 @@ Image <%= @pic_num+1 %> of <%= @pics_count %>
                                          :pic_id => @pic.id, :set_name => @pic.setname, 
                                          :pic_num => @pic_num}, 
                                          :confirm => 'Are you sure you want to delete this pic?') %>
+  <%= link_to "Slideshow", :action => :slideshow, :setname => @pic.setname %>
 </div>
