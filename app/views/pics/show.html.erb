@@ -1,7 +1,7 @@
 <%= render "layouts/navbar" %>
 <div class="caption"><%= @pic.caption %></div>
 <br/>
-<%= link_to_if @pic_height == @height_limit, image_tag(@pic.img_src, :height => @pic_height), @pic.img_src %>
+<%= link_to_if @pic_height == @height_limit, image_tag(@pic.img_src, :height => @pic_height), @pic.img_src%>
 <br/>
 Image <%= @pic_num+1 %> of <%= @pics_count %>
 <div class="delete">
