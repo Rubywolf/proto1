@@ -28,12 +28,12 @@ class PicsController < ApplicationController
     @title = params[:setname]
     this_set = @title
 		pics=Pic.find_all_by_setname(this_set)
-    @pics_count = pics.length
+    @pics_count = pics.count
     
     # If there are no pics in the set, use all pics in database
 		if @pics_count == 0
 			pics=Pic.find(:all)
-      @pics_count = pics.length
+      @pics_count = pics.count
       @pic_num = 0
  	    @route_string="/show"
     else
@@ -55,7 +55,7 @@ class PicsController < ApplicationController
 		delete_pic.destroy
 		new_num = params[:pic_num].to_i
     new_num -= 1 if new_num > 0
-    set_count = Pic.find_all_by_setname(params[:set_name]).length
+    set_count = Pic.find_all_by_setname(params[:set_name]).count
     if set_count > 0
       redirect_to "/show/#{params[:set_name]}/#{new_num}"
     else
@@ -70,7 +70,7 @@ class PicsController < ApplicationController
 		
 	def last
 		@pics = Pic.find_all_by_setname(params[:setname])
-		redirect_to "/show/#{params[:setname]}/#{@pics.length-1}"
+		redirect_to "/show/#{params[:setname]}/#{@pics.count-1}"
 	end
   
   def slideshow
