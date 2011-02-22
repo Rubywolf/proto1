@@ -1,5 +1,6 @@
 class PicsController < ApplicationController
   require 'fastimage'
+  
   def initialize
     @height_limit = 600
   end
