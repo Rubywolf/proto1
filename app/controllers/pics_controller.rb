@@ -50,7 +50,8 @@ class PicsController < ApplicationController
     else
       @pic_height =@height_limit
     end
-    if @pic.img_width / (@pic.img_height / @pic_height) > @width_limit
+    adjusted_width = @pic.img_width.to_f / (@pic.img_height.to_f / @pic_height.to_f)
+    if  adjusted_width > @width_limit
       @pic_height = @pic.img_height / (@pic.img_width / @width_limit)
     end
 	end
