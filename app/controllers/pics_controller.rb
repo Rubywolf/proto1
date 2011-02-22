@@ -45,11 +45,13 @@ class PicsController < ApplicationController
     
     # Get the requested pic, resize if too large
 		@pic=pics[@pic_num]
+    # adjust height to fit
     if @pic.img_height < @height_limit
       @pic_height = @pic.img_height
     else
       @pic_height =@height_limit
     end
+    # adjust width if height adjustment still leaves pic too wide
     adjusted_width = @pic.img_width.to_f / (@pic.img_height.to_f / @pic_height.to_f)
     if  adjusted_width > @width_limit
       @pic_height = (@pic.img_height.to_f  / (@pic.img_width.to_f  / @width_limit.to_f )).to_i

@@ -1,15 +1,13 @@
 <%= render "layouts/navbar" %>
-<div class="caption"><%= @pic.caption %></div>
-<br/>
 <%= link_to_if @pic.img_height > @height_limit, image_tag(@pic.img_src, :height => @pic_height), @pic.img_src%>
-<br/>
-Image <%= @pic_num+1 %> of <%= @pics_count %>
+<!-- <div class="caption"><%= @pic.caption %></div> -->
 <div class="delete">
   <%= button_to('Delete',  {:controller => 'pics', :action => :delete,
                                          :pic_id => @pic.id, :set_name => @pic.setname, 
                                          :pic_num => @pic_num}, 
                                          :confirm => 'Are you sure you want to delete this pic?') %>
 </div>
+<div class="counter"><%= @pic_num+1 %> of <%= @pics_count %></div>
 <%= debug(params) if Rails.env.development? %><br/>
 <%= "img_w: #{@pic.img_width}, img_h: #{@pic.img_height}," if Rails.env.development? %>
 <%= "pic_height: #{@pic_height}, height_limit: #{@height_limit}" if Rails.env.development? %>
