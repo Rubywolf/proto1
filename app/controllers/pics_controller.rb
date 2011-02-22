@@ -3,6 +3,7 @@ class PicsController < ApplicationController
   
   def initialize
     @height_limit = 600
+    @width_limit = 600
   end
   
 	def save
@@ -24,6 +25,7 @@ class PicsController < ApplicationController
 	end
 	
 	def show
+    @zoomed = false
     # Get the pics in the requested set
     @title = params[:setname]
     this_set = @title
@@ -47,6 +49,11 @@ class PicsController < ApplicationController
       @pic_height = @pic.img_height
     else
       @pic_height =@height_limit
+      @zoomed = true
+    end
+    if @pic.img_width / (@pic.img_height / @pic_height) > @width_limit
+      @pic_height = @pic.img_height / (@pic.img_width / @width_limit)
+      @zoomed = true
     end
 	end
 	
