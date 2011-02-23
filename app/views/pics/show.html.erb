@@ -1,13 +1,12 @@
 <%= render "layouts/navbar" %>
-<div class="caption"><%= @pic.caption %></div>
-<br/>
 <%= link_to_if @pic_height < @pic.img_height, image_tag(@pic.img_src, :height => @pic_height), @pic.img_src%>
 <br/>
-Image <%= @pic_num+1 %> of <%= @pics_count %>
+<div class="caption"><%= @pic.caption %></div>
 <div class="delete">
   <%= button_to('Delete',  {:controller => 'pics', :action => :delete,
                                          :pic_id => @pic.id, :set_name => @pic.setname, 
                                          :pic_num => @pic_num}, 
                                          :confirm => 'Are you sure you want to delete this pic?') %>
-  <%= link_to "Slideshow", :action => :slideshow, :setname => @pic.setname %>
 </div>
+Image <%= @pic_num+1 %> of <%= @pics_count %><br/>
+<%= link_to "Slideshow", :action => :slideshow, :setname => @pic.setname %>
