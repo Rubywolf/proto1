@@ -9,13 +9,13 @@ body {
 }
 
 header {
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 section {
-    margin-top: 1em;
     font-size: 120%;
-    padding: 10px;
+    padding-left: 15px;
+	padding-top: 5px;
     background: #ccd;
 	text-align: center;
 }
@@ -77,10 +77,10 @@ nav {
 }
 
 .sitenav {
-    padding: 0 0.7em;
     white-space: nowrap;
-	background-color: #dde;
-	float: right;
+	background-color: #eef;
+	float: center;
+	text-align: right;
     white-space: nowrap;
 	font-weight: bold;
 	font-size: 110%;
@@ -107,7 +107,8 @@ nav {
 }
 
 .sitenav ul li a:visited {
-    color: #929;
+#    color: #929;
+    color: blue;
 }
 
 .sitenav ul li a:hover {
