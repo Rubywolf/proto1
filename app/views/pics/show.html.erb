@@ -9,7 +9,3 @@
 </div>
 <div class="counter"><%= @pic_num+1 %> of <%= @pics_count %></div>
 <%= debug(params) if Rails.env.development? %><br/>
-<%= "img_w: #{@pic.img_width}, img_h: #{@pic.img_height}," if Rails.env.development? %>
-<%= "pic_height: #{@pic_height}, height_limit: #{@height_limit}" if Rails.env.development? %>
-<%= "foo: #{@foo}, bar: #{@bar}" if Rails.env.development? %>
-<%= debug(@my_cooks) if Rails.env.development? %>

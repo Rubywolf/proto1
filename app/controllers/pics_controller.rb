@@ -87,6 +87,8 @@ class PicsController < ApplicationController
   
   def getprefs
     @title = "Image size maximums"
+    @height_limit = cookies[:height_max].nil? ? 600 : cookies[:height_max].to_i 
+    @width_limit = cookies[:width_max].nil? ? 600 : cookies[:width_max].to_i 
   end
   
   def setprefs

@@ -1,9 +1,9 @@
-<picset>
+<div class="picset">
+<br/>
 <h1>Picture Sets</h1>
   <ul>
   <% @setnames.each { |set| %>
   <li> <%= link_to_unless(set.setname.nil?, set.setname, "/show/#{set.setname}/0") %> </li>
   <% } %>
-  <li>  <%= link_to "( add new image... )", "/new" %> </li>
   </ul>
-</picset>
+</div>

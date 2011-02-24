@@ -2,12 +2,13 @@
 <html>
   <head>
     <title>Eggpix</title>
-    <%= render 'layouts/stylesheets' %>
     <title >Eggpix -- <%= @title %></title>
+    <%= render 'layouts/stylesheets' %>
   </head>
   <body>
     <div class="container">
-      <section class="round">
+     <%= render 'layouts/sitenav' %>
+     <section class="round">
         <%= yield %>
       </section>
       <% debug(params) if !Rails.env.production? %>
