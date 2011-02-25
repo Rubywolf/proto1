@@ -7,3 +7,4 @@
 <tr><td></td><td><%= f.submit "Save"%>&nbsp;&nbsp;&nbsp<%= link_to "Cancel", :action => "index"%></td></tr>
 <% end %>
 </table>
+<%= debug(params) if Rails.env.development? %>

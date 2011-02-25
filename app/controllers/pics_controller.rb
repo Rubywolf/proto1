@@ -1,10 +1,10 @@
 class PicsController < ApplicationController
   require 'fastimage'
   
-  def initialize
-    @height_limit = 600
-    @width_limit = 800
-  end
+  #~ def initialize
+    #~ @height_limit = 600
+    #~ @width_limit = 800
+  #~ end
   
 	def save
 		@pic=Pic.new(params[:pic])
@@ -25,7 +25,6 @@ class PicsController < ApplicationController
 	end
 	
 	def show
-
     # Get the pics in the requested set
     @title = params[:setname]
     this_set = @title
@@ -46,16 +45,13 @@ class PicsController < ApplicationController
     # Get the requested pic, resize if too large
 		@pic=pics[@pic_num]
     # adjust height to fit
-    if @pic.img_height < @height_limit
-      @pic_height = @pic.img_height
-    else
-      @pic_height =@height_limit
-    end
-    # adjust width if height adjustment still leaves pic too wide
-    adjusted_width = @pic.img_width.to_f / (@pic.img_height.to_f / @pic_height.to_f)
-    if  adjusted_width > @width_limit
-      @pic_height = (@pic.img_height.to_f  / (@pic.img_width.to_f  / @width_limit.to_f )).to_i
-    end
+    height_limit = cookies[:height_max].nil? ? 600 : cookies[:height_max].to_i 
+    width_limit = cookies[:width_max].nil? ? 600 : cookies[:width_max].to_i 
+    height_ratio = @pic.img_height.to_f / height_limit.to_f
+    width_ratio = @pic.img_width.to_f / width_limit.to_f
+    ratio = height_ratio > width_ratio ? height_ratio : width_ratio
+    ratio = ratio > 1 ? ratio : 1
+    @pic_height = @pic.img_height.to_f / ratio
 	end
 	
 	def delete
@@ -88,7 +84,24 @@ class PicsController < ApplicationController
     @this_height = @height_limit
     @this_height = @this_pic.img_height if @this_pic.img_height < @height_limit
   end
-	
+  
+  def getprefs
+    @title = "Image size maximums"
+    @height_limit = cookies[:height_max].nil? ? 600 : cookies[:height_max].to_i 
+    @width_limit = cookies[:width_max].nil? ? 600 : cookies[:width_max].to_i 
+  end
+  
+  def setprefs
+    cookies[:height_max] = {
+        :value => params[:height_max],
+        :expires => 20.years.from_now.utc
+    }
+     cookies[:width_max] = {
+        :value => params[:width_max],
+        :expires => 20.years.from_now.utc
+    }
+ end
+    
 end
 
 

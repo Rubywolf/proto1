@@ -1,0 +1,6 @@
+<table>
+<tr><td>New height max is: </td><td><%=cookies[:height_max] %></td></tr>
+<tr><td>New width max is: </td><td><%= cookies[:width_max] %></td></tr>
+<tr><td><%= button_to "Home", {:action => "index"} %><%= link_to "Try again", "/pics/getprefs" %></td><td></td></tr>
+</table>
+<%= debug(params) if Rails.env.development? %>

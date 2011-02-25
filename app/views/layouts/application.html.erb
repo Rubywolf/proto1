@@ -3,11 +3,11 @@
   <head>
     <title >Eggpix -- <%= @title %></title>
     <%= render 'layouts/stylesheets' %>
-    <%= javascript_include_tag "prototype" %>
   </head>
   <body>
     <div class="container">
-      <section class="round">
+     <%= render 'layouts/sitenav' %>
+     <section class="round">
         <%= yield %>
       </section>
       <% debug(params) if !Rails.env.production? %>

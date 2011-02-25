@@ -1,22 +1,23 @@
 .container {
 	margin-left: 10%;
 	margin-right: 10%;
+	float: center;
 }
 
 body {
     background: #556;
-	text-align: center;
 }
 
 header {
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 section {
-    margin-top: 1em;
     font-size: 120%;
-    padding: 10px;
+    padding-left: 15px;
+	padding-top: 5px;
     background: #ccd;
+	text-align: center;
 }
 
 section h1 {
@@ -49,29 +50,72 @@ nav {
     white-space: nowrap;
 }
 
-picset {
+.picset {
 	text-align: left;
 }
 
-picset ul {
+.picset ul {
     margin: 15px;
     padding: 0;
 }
 
-picset ul li {
+.picset ul li {
     padding: 0.2em 0;
 }
 
-picset ul li a {
+.picset ul li a {
     padding: 3px;
     font-weight: bold;
 }
 
-picset ul li a:visited {
+.picset ul li a:visited {
     color: #09c;
 }
 
-picset ul li a:hover {
+.picset ul li a:hover {
+    text-decoration: underline;
+}
+
+.sitenav {
+    white-space: nowrap;
+	background-color: #eef;
+	float: center;
+	text-align: right;
+    white-space: nowrap;
+	font-weight: bold;
+	font-size: 115%;
+    -moz-border-radius:     10px;
+    -webkit-border-radius:  10px;
+    border-radius:          10px;
+}
+
+.sitenav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.sitenav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.2em;
+	background: #ddddff;
+    -moz-border-radius:     15px;
+    -webkit-border-radius:  15px;
+    border-radius:          15px;
+}
+
+.sitenav ul li a {
+    padding: 0 5px;
+	color: #bbf;
+	font-weight: normal;
+}
+
+.sitenav ul li a:visited {
+#    color: #929;
+    color: blue;
+}
+
+.sitenav ul li a:hover {
     text-decoration: underline;
 }
 
