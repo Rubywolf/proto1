@@ -1,6 +1,6 @@
 class PicsController < ApplicationController
   require 'fastimage'
-  before_filter :store_calling_page, :only => [:show,  :index]
+  before_filter :store_calling_page, :only => [:show,  :new, :index]
   after_filter :reset_current_setname, :except => :show 
   
 	def save
