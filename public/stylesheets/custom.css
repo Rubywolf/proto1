@@ -13,9 +13,7 @@ header {
 }
 
 section {
-    font-size: 120%;
-    padding-left: 15px;
-	padding-top: 5px;
+    font-size: 100%;
     background: #ccd;
 	text-align: center;
 }
@@ -46,17 +44,23 @@ a img {
 }
 
 nav {
-    padding: 0 0.7em;
+    padding: 0 0.1em;
     white-space: nowrap;
 }
 
 .picset {
+	padding-left: 15px;
 	text-align: left;
+}
+
+.picset h1 {
+	font-size: 250%;
 }
 
 .picset ul {
     margin: 15px;
     padding: 0;
+	font-size: 120%;
 }
 
 .picset ul li {
@@ -78,16 +82,12 @@ nav {
 }
 
 .sitenav {
-    white-space: nowrap;
 	background-color: #eef;
 	float: center;
 	text-align: right;
     white-space: nowrap;
 	font-weight: bold;
 	font-size: 115%;
-    -moz-border-radius:     10px;
-    -webkit-border-radius:  10px;
-    border-radius:          10px;
 }
 
 .sitenav ul {
@@ -100,9 +100,6 @@ nav {
     display: inline-block;
     padding: 0.2em;
 	background: #ddddff;
-    -moz-border-radius:     15px;
-    -webkit-border-radius:  15px;
-    border-radius:          15px;
 }
 
 .sitenav ul li a {
