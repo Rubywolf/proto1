@@ -1,10 +1,7 @@
 class PicsController < ApplicationController
   require 'fastimage'
-  
-  #~ def initialize
-    #~ @height_limit = 600
-    #~ @width_limit = 800
-  #~ end
+  before_filter :store_calling_page, :only => [:show,  :new, :index]
+  after_filter :reset_current_setname, :except => :show 
   
 	def save
 		@pic=Pic.new(params[:pic])
@@ -22,18 +19,21 @@ class PicsController < ApplicationController
 	def new
     @title = "Add a new image..."
 		@pic=Pic.new
+    @pic.setname = session[:current_setname]
 	end
 	
 	def show
+    session[:current_setname] = params[:setname]
+
     # Get the pics in the requested set
     @title = params[:setname]
     this_set = @title
-		pics=Pic.find_all_by_setname(this_set)
+		pics=Pic.find_all_by_setname(this_set, :order => "created_at")
     @pics_count = pics.count
     
     # If there are no pics in the set, use all pics in database
 		if @pics_count == 0
-			pics=Pic.find(:all)
+			pics=Pic.find(:all, :order => "created_at")
       @pics_count = pics.count
       @pic_num = 0
  	    @route_string="/show"
@@ -100,7 +100,18 @@ class PicsController < ApplicationController
         :value => params[:width_max],
         :expires => 20.years.from_now.utc
     }
- end
+    redirect_to session[:return_to]
+  end
+  
+  private
+  
+    def reset_current_setname
+      session[:current_setname] = ''
+    end
+    
+    def store_calling_page
+      session[:return_to] = request.fullpath
+    end
     
 end
 

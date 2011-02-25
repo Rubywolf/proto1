@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Eggpix</title>
     <title >Eggpix -- <%= @title %></title>
     <%= render 'layouts/stylesheets' %>
   </head>
   <body>
     <div class="container">
-     <%= render 'layouts/sitenav' %>
      <section class="round">
+     <%= render 'layouts/sitenav' %>
         <%= yield %>
       </section>
       <% debug(params) if !Rails.env.production? %>
