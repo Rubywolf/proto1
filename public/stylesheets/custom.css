@@ -66,6 +66,7 @@ nav {
 .picset ul li a {
     padding: 3px;
     font-weight: bold;
+	color: #0c9;
 }
 
 .picset ul li a:visited {
@@ -106,12 +107,11 @@ nav {
 
 .sitenav ul li a {
     padding: 0 5px;
-	color: #bbf;
+	color: green;
 	font-weight: normal;
 }
 
 .sitenav ul li a:visited {
-#    color: #929;
     color: blue;
 }
 

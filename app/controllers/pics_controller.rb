@@ -28,12 +28,12 @@ class PicsController < ApplicationController
     # Get the pics in the requested set
     @title = params[:setname]
     this_set = @title
-		pics=Pic.find_all_by_setname(this_set)
+		pics=Pic.find_all_by_setname(this_set, :order => "created_at")
     @pics_count = pics.count
     
     # If there are no pics in the set, use all pics in database
 		if @pics_count == 0
-			pics=Pic.find(:all)
+			pics=Pic.find(:all, :order => "created_at")
       @pics_count = pics.count
       @pic_num = 0
  	    @route_string="/show"
