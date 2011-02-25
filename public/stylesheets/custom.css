@@ -84,9 +84,6 @@ nav {
     white-space: nowrap;
 	font-weight: bold;
 	font-size: 115%;
-    -moz-border-radius:     10px;
-    -webkit-border-radius:  10px;
-    border-radius:          10px;
 }
 
 .sitenav ul {
@@ -99,9 +96,6 @@ nav {
     display: inline-block;
     padding: 0.2em;
 	background: #ddddff;
-    -moz-border-radius:     15px;
-    -webkit-border-radius:  15px;
-    border-radius:          15px;
 }
 
 .sitenav ul li a {
