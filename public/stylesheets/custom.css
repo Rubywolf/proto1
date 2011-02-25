@@ -86,7 +86,6 @@ nav {
 	float: center;
 	text-align: right;
     white-space: nowrap;
-	font-weight: bold;
 	font-size: 115%;
 }
 
@@ -105,7 +104,6 @@ nav {
 .sitenav ul li a {
     padding: 0 5px;
 	color: green;
-	font-weight: normal;
 }
 
 .sitenav ul li a:visited {
@@ -123,7 +121,7 @@ nav {
 }
 
 .counter {
-	font-size: 60%;
+	font-size: 80%;
 	margin: 0;
 }
 

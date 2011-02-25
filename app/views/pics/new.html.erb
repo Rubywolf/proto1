@@ -2,9 +2,10 @@
 <tr><td colspan="2"><h1>Add Image</h1></td></tr>
 <% form_for(@pic,:url=>{:action=>'save'}) do |f| %>
 <tr><td><b>Image URL</b></td><td><%= f.text_field :img_src %></td></tr>
-<tr><td><b>Caption</b></td><td><%= f.text_field :caption %></td></tr>
+<tr><td><b>Caption</b></td><td><%= f.text_field :caption %></td></tr
 <tr><td><b>Setname</b></td><td><%= f.text_field :setname %></td></tr>
-<tr><td></td><td><%= f.submit "Save"%>&nbsp;&nbsp;&nbsp<%= link_to "Cancel", :action => "index"%></td></tr>
+<tr><td></td><td><%= f.submit "Save"%>&nbsp;&nbsp;&nbsp<%= link_to "Cancel", session[:return_to] %></td></tr>
 <% end %>
 </table>
 <%= debug(params) if Rails.env.development? %>
+<%= debug(session) if Rails.env.development? %>

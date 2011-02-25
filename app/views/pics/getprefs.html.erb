@@ -3,7 +3,7 @@
 <tr><td colspan="2"><h1>Optimize Maximum Image Size</h1><h3>for your browser</h3></td></tr>
 <tr><td><b><%= label_tag 'Maximum Image Height'%></b></td><td><%= text_field_tag 'height_max', @height_limit%></td></tr>
 <tr><td><b><%= label_tag 'Maximum Image Width' %></b></td><td><%= text_field_tag 'width_max', @width_limit %></td></tr>
-<tr><td></td><td><%= submit_tag 'Save' %>&nbsp;&nbsp;&nbsp<%= link_to "Cancel", "/" %></td></tr>
+<tr><td></td><td><%= submit_tag 'Save' %>&nbsp;&nbsp;&nbsp<%= link_to "Cancel", session[:return_to] %></td></tr>
 </table>
 <% end %>
 <%= debug(params) if Rails.env.development? %>
