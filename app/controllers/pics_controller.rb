@@ -28,7 +28,8 @@ class PicsController < ApplicationController
     # Get the pics in the requested set
     @title = params[:setname]
     this_set = @title
-		pics=Pic.find_all_by_setname(this_set, :order => "created_at")
+		#~ pics=Pic.find_all_by_setname(this_set, :order => "created_at")
+		pics=Pic.find_all_by_setname(this_set)
     @pics_count = pics.count
     
     # If there are no pics in the set, use all pics in database
@@ -69,7 +70,7 @@ class PicsController < ApplicationController
 	
 	def index
     @title = "Choose a picture set"
-		@setnames= Pic.find( :all, :select => 'DISTINCT setname')
+		@setnames= Pic.find( :all, :select => 'DISTINCT setname', :order => 'setname')
 	end
 		
 	def last
