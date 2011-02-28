@@ -3,8 +3,8 @@
   <%= link_to_unless((@pic_num <1), image_tag("first.png"), "#{@route_string}/0") %>
   <%= link_to_unless((@pic_num < 1), image_tag("prev.png"), "#{@route_string}/#{(@pic_num-1).to_s}") %>
   <%= link_to_unless((@pics_count < 2), image_tag("random.png"), "#{@route_string}/#{rand(@pics_count)}") %>
+  <%= link_to_unless((@pics_count < 2), image_tag("slideshow.png"), :action => :slideshow, :setname => @pic.setname) %>
   <%= link_to_unless((@pic_num+1 >= @pics_count), image_tag("next.png"), "#{@route_string}/#{(@pic_num+1).to_s}") %>
   <%= link_to_unless((@pic_num+1 >= @pics_count), image_tag("last.png"), "#{@route_string}/#{(@pics_count-1).to_s}") %>
 </div>
-
 
