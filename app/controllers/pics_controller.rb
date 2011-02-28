@@ -32,8 +32,7 @@ class PicsController < ApplicationController
     # Get the pics in the requested set
     @title = params[:setname]
     this_set = @title
-		#~ pics=Pic.find_all_by_setname(this_set, :order => "created_at")
-		pics=Pic.find_all_by_setname(this_set)
+		pics=Pic.find_all_by_setname(this_set, :order => "created_at")
     @pics_count = pics.count
     
     # If there are no pics in the set, use all pics in database
@@ -95,17 +94,21 @@ class PicsController < ApplicationController
   
   def slideshow
     @title = "Slideshow"
-    pic_set = Pic.find_all_by_setname(params[:setname])
-    @slide_pic = pic_set[rand(pic_set.count)]
+    pic_set = Pic.find_all_by_setname(params[:setname], :order => "created_at")
+    @image_num = rand(pic_set.count)
+    @slide_pic = pic_set[@image_num]
     @fit_height = fitted_height @slide_pic
     @slide_time = cookies[:slide_time].nil? ? 5 : cookies[:slide_time].to_i 
   end
   
   def new_slide 
-    pic_set = Pic.find_all_by_setname(params[:setname])
-    @slide_pic = pic_set[rand(pic_set.count)]
+    pic_set = Pic.find_all_by_setname(params[:setname], :order => "created_at")
+    @image_num = rand(pic_set.count)
+    @slide_pic = pic_set[@image_num]
     @fit_height = fitted_height @slide_pic
-    render :inline => "<%= image_tag @slide_pic.img_src, :height => @fit_height %>"
+    render :inline => "<%= link_to(image_tag('stop.png'), '/show/#{@slide_pic.setname}/#{@image_num}') %><br\>" \
+                               "<%= image_tag @slide_pic.img_src, :height => @fit_height %>"
+
   end
   
   private
