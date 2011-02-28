@@ -4,6 +4,15 @@
 <tr><td><b><%= label_tag 'Maximum Height for Image Display'%></b></td><td><%= text_field_tag 'height_max', @height_limit%></td></tr>
 <tr><td><b><%= label_tag 'Maximum Width for Image Display' %></b></td><td><%= text_field_tag 'width_max', @width_limit %></td></tr>
 <tr><td><b><%= label_tag 'Time Between Slides' %></b></td><td><%= text_field_tag 'slide_time', @slide_time %></td></tr>
+<tr><td>
+<div class="form_row">
+  <b>Slideshow sequence:</b></td>
+  <td>
+  <% [ 'sequential', 'random' ].each do |seq| %>
+    <br><%= radio_button_tag 'seq', seq, @seq == seq %>
+    <%= label_tag "sequence_#{seq}", seq.humanize %>
+  <% end %>
+</div></td></tr>
 <tr><td></td><td><%= submit_tag 'Save' %>&nbsp;&nbsp;&nbsp<%= link_to "Cancel", :back %></td></tr>
 </table>
 <% end %>

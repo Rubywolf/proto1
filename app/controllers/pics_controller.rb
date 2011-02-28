@@ -89,13 +89,19 @@ class PicsController < ApplicationController
         :value => params[:slide_time],
         :expires => 20.years.from_now.utc
     }
+    cookies[:slide_seq] = {
+        :value => params[:seq],
+        :expires => 20.years.from_now.utc
+    }
     redirect_to session[:return_to]
   end
   
   def slideshow
     @title = "Slideshow"
     pic_set = Pic.find_all_by_setname(params[:setname], :order => "created_at")
-    @image_num = rand(pic_set.count)
+    #~ @image_num = rand(pic_set.count)
+    @image_num = params[:pic_num].to_i
+    session[:pic_num] = @image_num
     @slide_pic = pic_set[@image_num]
     @fit_height = fitted_height @slide_pic
     @slide_time = cookies[:slide_time].nil? ? 5 : cookies[:slide_time].to_i 
@@ -103,11 +109,19 @@ class PicsController < ApplicationController
   
   def new_slide 
     pic_set = Pic.find_all_by_setname(params[:setname], :order => "created_at")
-    @image_num = rand(pic_set.count)
+    slideshow_type = cookies[:slide_seq].nil? ? "sequential" : cookies[:slide_seq]
+    if slideshow_type == "random"
+      @image_num = rand(pic_set.count)
+    else
+      @image_num = session[:pic_num].to_i
+      @image_num += 1
+      @image_num = 0 if @image_num == pic_set.count
+      session[:pic_num] = @image_num
+    end
     @slide_pic = pic_set[@image_num]
     @fit_height = fitted_height @slide_pic
     render :inline => "<%= link_to(image_tag('stop.png'), '/show/#{@slide_pic.setname}/#{@image_num}') %><br\>" \
-                               "<%= image_tag @slide_pic.img_src, :height => @fit_height %>"
+                      "<%= image_tag @slide_pic.img_src, :height => @fit_height %>"
 
   end
   

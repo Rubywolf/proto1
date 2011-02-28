@@ -1,7 +1,8 @@
 <%= periodically_call_remote :update => 'new_slide', 
-                             :url => {:action => "new_slide", :setname => @slide_pic.setname},
+                             :url => {:action => "new_slide", :setname => @slide_pic.setname, :pic_num => @image_num},
                              :frequency => @slide_time %>
 <div id='new_slide'>
+<script>paused = false</script>
 <%= link_to(image_tag("stop.png"), "/show/#{@slide_pic.setname}/#{@image_num}") %>
 <br/>
 <%= image_tag @slide_pic.img_src, :height => @fit_height %>
