@@ -74,6 +74,7 @@ class PicsController < ApplicationController
     @height_limit = cookies[:height_max].nil? ? 600 : cookies[:height_max].to_i 
     @width_limit = cookies[:width_max].nil? ? 600 : cookies[:width_max].to_i 
     @slide_time = cookies[:slide_time].nil? ? 5 : cookies[:slide_time].to_i 
+    @seq = cookies[:slide_seq].nil? ? "sequential" : cookies[:slide_seq]
   end
   
   def setprefs
