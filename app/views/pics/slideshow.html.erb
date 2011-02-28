@@ -1,9 +1,9 @@
-<div class="slideshow">
-<div class="caption"><%= @this_pic.caption %></div>
-<br/>
-<%= link_to_if @this_height == @height_limit, image_tag(@this_pic.img_src, :height => @this_height), @this_pic.img_src %>
-<br/>
+<%= periodically_call_remote :update => 'new_slide', 
+                             :url => {:action => "new_slide", :setname => @slide_pic.setname},
+                             :frequency => @slide_time %>
+<h1 class="slideshow">Slideshow</h1>
+<div id='new_slide'>
+<%= image_tag @slide_pic.img_src, :height => @fit_height %>
 </div>
-<%= button_to("Stop slide show", {:update => "slideshow", :action => :show, :id => @this_pic.id, :setname => @this_pic.setname}) %>
-<%= periodically_call_remote(:update => 'slideshow', :frequency => 3, :url => {:action => 'slideshow'}) %>
-<%= debug params %>
+
+<%= button_to("Stop slide show", {:action => :show, :setname => @slide_pic.setname}) %>

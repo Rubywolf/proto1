@@ -1,8 +1,19 @@
 class PicsController < ApplicationController
   require 'fastimage'
-  before_filter :store_calling_page, :only => [:show,  :new, :index]
-  after_filter :reset_current_setname, :except => :show 
+  before_filter :store_calling_page, :only => [:show,  :new, :index, :slideshow]
+  after_filter :reset_current_setname, :except => [:show, :slideshow, :new_slide] 
   
+	def index
+    @title = "Choose a picture set"
+		@setnames= Pic.find( :all, :select => 'DISTINCT setname', :order => 'setname')
+	end
+		
+	def new
+    @title = "Add a new image..."
+		@pic=Pic.new
+    @pic.setname = session[:current_setname]
+	end
+	
 	def save
 		@pic=Pic.new(params[:pic])
     img_size = FastImage.size(@pic.img_src, :timeout => 5)
@@ -16,15 +27,8 @@ class PicsController < ApplicationController
     end
 	end
   
-	def new
-    @title = "Add a new image..."
-		@pic=Pic.new
-    @pic.setname = session[:current_setname]
-	end
-	
 	def show
     session[:current_setname] = params[:setname]
-
     # Get the pics in the requested set
     @title = params[:setname]
     this_set = @title
@@ -45,14 +49,7 @@ class PicsController < ApplicationController
     
     # Get the requested pic, resize if too large
 		@pic=pics[@pic_num]
-    # adjust height to fit
-    height_limit = cookies[:height_max].nil? ? 600 : cookies[:height_max].to_i 
-    width_limit = cookies[:width_max].nil? ? 600 : cookies[:width_max].to_i 
-    height_ratio = @pic.img_height.to_f / height_limit.to_f
-    width_ratio = @pic.img_width.to_f / width_limit.to_f
-    ratio = height_ratio > width_ratio ? height_ratio : width_ratio
-    ratio = ratio > 1 ? ratio : 1
-    @pic_height = @pic.img_height.to_f / ratio
+    @pic_height = fitted_height @pic
 	end
 	
 	def delete
@@ -68,28 +65,16 @@ class PicsController < ApplicationController
     end
 	end
 	
-	def index
-    @title = "Choose a picture set"
-		@setnames= Pic.find( :all, :select => 'DISTINCT setname', :order => 'setname')
-	end
-		
 	def last
 		@pics = Pic.find_all_by_setname(params[:setname])
 		redirect_to "/show/#{params[:setname]}/#{@pics.count-1}"
 	end
   
-  def slideshow
-    @title = "Slideshow"
-    pic_set = Pic.find_all_by_setname(params[:setname])
-    @this_pic = pic_set[rand(pic_set.count)]
-    @this_height = @height_limit
-    @this_height = @this_pic.img_height if @this_pic.img_height < @height_limit
-  end
-  
   def getprefs
     @title = "Image size maximums"
     @height_limit = cookies[:height_max].nil? ? 600 : cookies[:height_max].to_i 
     @width_limit = cookies[:width_max].nil? ? 600 : cookies[:width_max].to_i 
+    @slide_time = cookies[:slide_time].nil? ? 5 : cookies[:slide_time].to_i 
   end
   
   def setprefs
@@ -97,11 +82,30 @@ class PicsController < ApplicationController
         :value => params[:height_max],
         :expires => 20.years.from_now.utc
     }
-     cookies[:width_max] = {
+    cookies[:width_max] = {
         :value => params[:width_max],
         :expires => 20.years.from_now.utc
     }
+    cookies[:slide_time] = {
+        :value => params[:slide_time],
+        :expires => 20.years.from_now.utc
+    }
     redirect_to session[:return_to]
+  end
+  
+  def slideshow
+    @title = "Slideshow"
+    pic_set = Pic.find_all_by_setname(params[:setname])
+    @slide_pic = pic_set[rand(pic_set.count)]
+    @fit_height = fitted_height @slide_pic
+    @slide_time = cookies[:slide_time].nil? ? 5 : cookies[:slide_time].to_i 
+  end
+  
+  def new_slide 
+    pic_set = Pic.find_all_by_setname(params[:setname])
+    @slide_pic = pic_set[rand(pic_set.count)]
+    @fit_height = fitted_height @slide_pic
+    render :inline => "<%= image_tag @slide_pic.img_src, :height => @fit_height %>"
   end
   
   private
@@ -114,6 +118,17 @@ class PicsController < ApplicationController
       session[:return_to] = request.fullpath
     end
     
+    def fitted_height(this_pic)
+      # adjust height to fit
+      height_limit = cookies[:height_max].nil? ? 600 : cookies[:height_max].to_i 
+      width_limit = cookies[:width_max].nil? ? 600 : cookies[:width_max].to_i 
+      height_ratio = this_pic.img_height.to_f / height_limit.to_f
+      width_ratio = this_pic.img_width.to_f / width_limit.to_f
+      ratio = height_ratio > width_ratio ? height_ratio : width_ratio
+      ratio = ratio > 1 ? ratio : 1
+      pic_height = this_pic.img_height.to_f / ratio
+    end
+      
 end
 
 
