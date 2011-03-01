@@ -1,5 +1,5 @@
 <div class="sitenav round">
-  <%= image_tag "eggpix.png", :class => "round" %>
+  <%= link_to image_tag("eggpix.png", :class => "round logo"), "/" %>
   <ul>
     <li class = "round"><%= link_to_unless is_active?("index"), "Home", "/" %></li>
     <li class = "round"><%= link_to_unless is_active?("new"), "Add new image", "/new" %></li>

@@ -119,6 +119,11 @@ nav {
     text-decoration: underline;
 }
 
+.logo {
+	
+	border-width: 0;
+}
+
 .caption {
 	font-size: 120%;
 	background: #eee;
