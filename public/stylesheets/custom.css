@@ -89,6 +89,11 @@ nav {
 	font-size: 115%;
 }
 
+.sitenav img { 
+	float: left;
+	background: #fdd;
+}
+
 .sitenav ul {
     margin: 0;
     padding: 0;
