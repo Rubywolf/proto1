@@ -1,5 +1,5 @@
 <%= render "layouts/navbar" %>
-<%= link_to_if @pic.img_height > @pic_height, image_tag(@pic.img_src, :height => @pic_height, :class => "round"), @pic.img_src %>
+<%= link_to_if @pic.img_height > @pic_height, image_tag(@pic.img_src, :height => @pic_height, :class => "round"), @pic.img_src, :class => "round" %>
 <!-- <div class="caption"><%= @pic.caption %></div> -->
 <div class="delete">
   <%= button_to('Delete',  {:controller => 'pics', :action => :delete,

@@ -126,6 +126,10 @@ class PicsController < ApplicationController
 
   end
   
+  def backup
+    @mypics = Pic.find(:all)
+  end
+  
   private
   
     def reset_current_setname
@@ -145,6 +149,7 @@ class PicsController < ApplicationController
       ratio = height_ratio > width_ratio ? height_ratio : width_ratio
       ratio = ratio > 1 ? ratio : 1
       pic_height = this_pic.img_height.to_f / ratio
+      pic_height.to_i
     end
       
 end
