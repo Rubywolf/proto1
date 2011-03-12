@@ -1,11 +1,14 @@
 <%= render "layouts/navbar" %>
-<%= link_to_if @pic.img_height > @pic_height, image_tag(@pic.img_src, :height => @pic_height, :class => "round"), @pic.img_src %>
-<!-- <div class="caption"><%= @pic.caption %></div> -->
-<div class="delete">
-  <%= button_to('Delete',  {:controller => 'pics', :action => :delete,
-                                         :pic_id => @pic.id, :set_name => @pic.setname, 
-                                         :pic_num => @pic_num}, 
-                                         :confirm => 'Are you sure you want to delete this pic?') %>
+<div id="new_pic">
+  <%= link_to_if @pic.img_height > @pic_height, image_tag(@pic.img_src, :height => @pic_height, :class => "round"), @pic.img_src %>
+  <!-- <div class="caption"><%= @pic.caption %></div> -->
+  <div class="delete">
+    <%= button_to('Delete',  {:controller => 'pics', :action => :delete,
+                              :pic_id => @pic.id, :set_name => @pic.setname, 
+                              :pic_num => @pic_num}, 
+                              :confirm => 'Are you sure you want to delete this pic?') %>
+  </div>
+  <div class="counter">Image <%= @pic_num+1 %> of <%= @pics_count %></div>
 </div>
-<div class="counter">Image <%= @pic_num+1 %> of <%= @pics_count %></div>
 <%= debug(params) if Rails.env.development? %><br/>
+

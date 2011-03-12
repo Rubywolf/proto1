@@ -1,11 +1,11 @@
 .container {
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left: auto;
+  width: 80%;
 	float: center;
 }
 
 body {
-    background: #556;
+  background: #556;    
 }
 
 header {
