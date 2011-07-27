@@ -6,7 +6,6 @@ class PicsController < ApplicationController
 	def index
     @title = "Choose a picture set"
 		@setnames= Pic.find( :all, :select => 'DISTINCT setname', :order => 'setname')
-    @setnames.delete("chicks")
 	end
 		
 	def new
