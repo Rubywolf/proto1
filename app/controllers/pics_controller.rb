@@ -43,7 +43,7 @@ class PicsController < ApplicationController
       pics = []
       allpics.each {|pic| pics.push pic unless pic.setname == "chicks"}
       @pics_count = pics.count
-      @pic_num = (@pic_num >= @pics_count) ? 1 : @pic_num
+      @pic_num = (params[:id] >= @pics_count) ? 1 : params[:id]
  	    @route_string="/show"
     else
       @pic_num = params[:id].to_i
