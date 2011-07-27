@@ -39,7 +39,9 @@ class PicsController < ApplicationController
     
     # If there are no pics in the set, use all pics in database
 		if @pics_count == 0
-			pics=Pic.find(:all, :order => "created_at")
+			allpics=Pic.find(:all, :order => "created_at")
+      pics = []
+      allpics.each {|pic| pics.push pic unless pic.setname == "chicks"}
       @pics_count = pics.count
       @pic_num = 0
  	    @route_string="/show"
