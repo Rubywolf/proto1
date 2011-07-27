@@ -1,10 +1,8 @@
 <div class="picset">
 <h1>Picture Sets</h1>
   <ul>
-  <% @setnames.each { |set| %>
-    <% if set.setname not "chicks" %>
+    <% @setnames.each { |set| %>
       <li> <%= link_to_unless(set.setname.nil?, set.setname, "/show/#{set.setname}/0") %> </li>
-    <% end %>
-  <% } %>
+    <% } %>
   </ul>
 </div>
