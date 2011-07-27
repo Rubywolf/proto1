@@ -37,14 +37,15 @@ class PicsController < ApplicationController
 		pics=Pic.find_all_by_setname(this_set, :order => "created_at")
     @pics_count = pics.count
     
-    # If there are no pics in the set, use all pics in database
+    # If there are no pics in the set, display the home page
 		if @pics_count == 0
-			allpics=Pic.find(:all, :order => "created_at")
-      pics = []
-      allpics.each {|pic| pics.push pic unless pic.setname == "chicks"}
-      @pics_count = pics.count
-      @pic_num = 0
- 	    @route_string="/show"
+      redirect_to "/"
+			# allpics=Pic.find(:all, :order => "created_at")
+   #    pics = []
+   #    allpics.each {|pic| pics.push pic unless pic.setname == "chicks"}
+   #    @pics_count = pics.count
+   #    @pic_num = 0
+ 	 #    @route_string="/show"
     else
       @pic_num = params[:id].to_i
       @route_string="/show/#{this_set}"
