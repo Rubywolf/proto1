@@ -6,7 +6,7 @@ class PicsController < ApplicationController
 	def index
     @title = "Choose a picture set"
 		@setnames= Pic.find( :all, :select => 'DISTINCT setname', :order => 'setname')
-    @setnames.delete_if? {|this| this.setname == "chicks"}
+    @setnames.map! {|this| this unless this.setname == "chicks"}
 	end
 		
 	def new
