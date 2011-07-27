@@ -39,7 +39,7 @@ class PicsController < ApplicationController
     
     # If there are no pics in the set, display the home page
 		if @pics_count == 0
-      redirect_to "/"
+      redirect_to "/index"
 			# allpics=Pic.find(:all, :order => "created_at")
    #    pics = []
    #    allpics.each {|pic| pics.push pic unless pic.setname == "chicks"}
