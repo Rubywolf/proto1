@@ -1,1 +1,5 @@
-<h1>Backup Complete</h1>
+<table>
+<% @mypics.each do | pic | %>
+<tr><td><%= pic.setname %></td><td><%= pic.img_src %></td><td><%= pic.caption %></td></tr>
+<% end %>
+</table>
