@@ -128,6 +128,10 @@ class PicsController < ApplicationController
   
   def backup
     @mypics = Pic.find(:all)
+    f = File.new("#{RAILS_ROOT}/public/db_backup.txt","w")
+    @mypics.each do | pic |
+      f.write("#{pic.img_src},#{pic.caption},#{pic.setname},#{pic.img_width},#{pic.img_height}")
+    end
   end
   
   private
