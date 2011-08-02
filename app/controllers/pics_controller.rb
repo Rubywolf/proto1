@@ -128,14 +128,6 @@ class PicsController < ApplicationController
   
   def backup
     @mypics = Pic.find(:all)
-    puts "Got all pics for backup"
-    f = File.new("#{RAILS_ROOT}/public/db_backup.txt","w")
-    puts "Backup file is #{f}"
-    @mypics.each do | pic |
-      f.write("#{pic.img_src},#{pic.caption},#{pic.setname},#{pic.img_width},#{pic.img_height}\n")
-    end
-    f.close
-    puts "File closed."
   end
   
   private
