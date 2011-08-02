@@ -45,6 +45,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/show/:setname/:id', :controller=>'pics', :action=>'show'
   map.connect '/save', :controller=>'pics', :action=>'save'
   map.connect '/new', :controller=>'pics', :action=>'new'
+  map.connect '/backup', :controller=>'pics', :action=>'backup'
   map.connect ':controller/:action'
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
