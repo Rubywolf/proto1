@@ -5,7 +5,7 @@ class PicsController < ApplicationController
   
 	def index
     @title = "Choose a picture set"
-		@setnames= Pic.find( :all, :select => "DISTINCT setname WHERE setname != 'chicks'", :order => 'setname')
+		@setnames= Pic.find( :all, :select => 'DISTINCT setname', :conditions => "setname != 'chicks'", :order => 'setname')
 	end
 		
 	def new
