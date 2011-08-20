@@ -5,7 +5,8 @@ class PicsController < ApplicationController
   
 	def index
     @title = "Choose a picture set"
-		@setnames= Pic.find( :all, :select => 'DISTINCT setname', :conditions => "setname != 'chicks'", :order => 'setname')
+		@setnames= Pic.find( :all, :select => 'DISTINCT setname', :order => 'setname')
+#		@setnames= Pic.find( :all, :select => 'DISTINCT setname', :conditions => "setname != 'chicks'", :order => 'setname')
 	end
 		
 	def new
@@ -37,7 +38,8 @@ class PicsController < ApplicationController
     
     # If there are no pics in the set, display the home page
     if @pics_count == 0
-			pics=Pic.find(:all, :conditions => "setname != 'chicks'", :order => "created_at")
+			pics=Pic.find(:all, :order => "created_at")
+#			pics=Pic.find(:all, :conditions => "setname != 'chicks'", :order => "created_at")
       @pics_count = pics.count
       @pic_num = (params[:id].to_i >= @pics_count) ? 1 : params[:id].to_i
  	    @route_string="/show"
